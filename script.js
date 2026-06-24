@@ -1,0 +1,304 @@
+/* ============================================
+   KIPPO — Interações + i18n (PT / EN)
+   - Troca de idioma sem recarregar
+   - Header scroll state
+   - Menu mobile
+   - Reveal on scroll
+   - Ano dinâmico no rodapé
+   ============================================ */
+(function () {
+    'use strict';
+
+    /* ---------- Dicionário de traduções ---------- */
+    var I18N = {
+        pt: {
+            _title: "KIPPO — Desenvolvimento de Sites, Landing Pages e Sistemas Web",
+            _desc: "A KIPPO cria sites institucionais, landing pages e sistemas web modernos usando React, JavaScript e tecnologias atuais. Soluções digitais focadas em performance e conversão.",
+            _ogTitle: "KIPPO — Transformamos ideias em experiências digitais",
+            _ogDesc: "Criamos sites, landing pages e sistemas modernos com React e JavaScript para acelerar seus resultados.",
+            _ogLocale: "pt_BR",
+
+            "nav.home": "Início",
+            "nav.services": "Serviços",
+            "nav.work": "Projetos",
+            "nav.about": "Sobre",
+            "nav.contact": "Contato",
+            "nav.cta": "Solicitar Orçamento",
+
+            "hero.studio": "— Estúdio digital",
+            "hero.loc": "São Paulo · Brasil",
+            "hero.title": "Transformamos ideias<br>em <em class=\"accent\">experiências&nbsp;digitais</em>.",
+            "hero.lead": "Criamos sites, landing pages e sistemas modernos com React, JavaScript e tecnologias atuais — projetados para performar e acelerar resultados.",
+            "hero.ctaPrimary": "Solicitar Orçamento",
+            "hero.ctaGhost": "Ver Projetos",
+            "hero.cred1": "+80 projetos entregues",
+            "hero.cred2": "7 anos de experiência",
+            "hero.cred3": "Foco em conversão",
+
+            "services.eyebrow": "Serviços",
+            "services.title": "O que construímos para você",
+            "services.desc": "Soluções digitais sob medida, do conceito ao deploy, pensadas para performar e converter.",
+            "services.c1.title": "Landing Pages",
+            "services.c1.text": "Landing pages otimizadas para conversão, com copy estratégica, performance e design orientado a resultados.",
+            "services.c1.tag": "Alta conversão",
+            "services.c2.title": "Sites Institucionais",
+            "services.c2.text": "Sites rápidos, responsivos e profissionais que transmitem credibilidade e fortalecem sua marca.",
+            "services.c2.tag": "Responsivo",
+            "services.c3.title": "Sistemas Web",
+            "services.c3.text": "Soluções sob medida para empresas: painéis, plataformas e ferramentas internas que escalam com o negócio.",
+            "services.c3.tag": "Sob medida",
+            "services.c4.title": "Automação",
+            "services.c4.text": "Integrações e processos automatizados que eliminam tarefas repetitivas e economizam tempo da equipe.",
+            "services.c4.tag": "Eficiência",
+
+            "tech.eyebrow": "Tecnologias",
+            "tech.title": "Stack moderna e confiável",
+            "tech.desc": "Trabalhamos com um ecossistema consolidado, garantindo manutenção, performance e longevidade aos seus projetos.",
+            "tech.rest": "APIs REST",
+
+            "about.quote": "“Tecnologia que trabalha a favor do seu negócio.”",
+            "about.eyebrow": "Sobre a KIPPO",
+            "about.title": "Sua parceira tecnológica",
+            "about.text1": "Somos uma equipe especializada em desenvolvimento digital, com foco em performance, experiência do usuário e crescimento. Unimos design refinado à engenharia de software para entregar produtos que funcionam — e que escalam.",
+            "about.text2": "Acreditamos em soluções diretas, código limpo e relacionamentos duradouros. Cada projeto é tratado como uma parceria: entendemos seus objetivos e transformamos desafios em resultados mensuráveis.",
+            "about.l1": "Código limpo e manutenível",
+            "about.l2": "Performance e SEO desde o início",
+            "about.l3": "Comunicação clara e prazos cumpridos",
+
+            "work.eyebrow": "Portfólio",
+            "work.title": "Projetos selecionados",
+            "work.desc": "Uma amostra de trabalhos recentes que unem estética, performance e propósito.",
+            "work.p1.title": "FinTech Dashboard",
+            "work.p1.text": "Plataforma de gestão financeira com dashboards em tempo real e relatórios automáticos.",
+            "work.p2.title": "Landing Vértice",
+            "work.p2.text": "Landing page de alta conversão para startup de consultoria, com A/B testing.",
+            "work.p2.t1": "Landing",
+            "work.p3.title": "Automação Aura",
+            "work.p3.text": "Integração entre CRM e ERP eliminando trabalho manual e reduzindo erros em 90%.",
+            "work.p3.t1": "Automação",
+            "work.p4.title": "Portal Notícia",
+            "work.p4.text": "Site institucional responsivo para veículo de comunicação, com CMS customizado.",
+            "work.p4.t1": "Site",
+
+            "test.eyebrow": "Depoimentos",
+            "test.title": "O que dizem nossos clientes",
+            "test.q1": "“Entregaram além do esperado. O novo site triplicou nossas conversões em três meses.”",
+            "test.r1": "Diretora · Vértice Consultoria",
+            "test.q2": "“Profissionalismo do briefing ao deploy. Automação que nos economizou horas toda semana.”",
+            "test.r2": "CEO · Aura Soluções",
+            "test.q3": "“Design impecável e código sólido. A KIPPO virou nossa parceira de tecnologia oficial.”",
+
+            "cta.title": "Pronto para tirar seu projeto do papel?",
+            "cta.text": "Vamos conversar sobre a sua ideia e encontrar a melhor forma de torná-la realidade.",
+            "cta.btn": "Falar com um especialista",
+
+            "footer.tagline": "Desenvolvimento de produtos digitais com performance e propósito.",
+            "footer.rights": "Todos os direitos reservados."
+        },
+        en: {
+            _title: "KIPPO — Web Development: Sites, Landing Pages & Web Systems",
+            _desc: "KIPPO builds institutional websites, landing pages and modern web systems using React, JavaScript and current technologies. Digital solutions focused on performance and conversion.",
+            _ogTitle: "KIPPO — Turning ideas into digital experiences",
+            _ogDesc: "We build modern websites, landing pages and web systems with React and JavaScript to accelerate your results.",
+            _ogLocale: "en_US",
+
+            "nav.home": "Home",
+            "nav.services": "Services",
+            "nav.work": "Work",
+            "nav.about": "About",
+            "nav.contact": "Contact",
+            "nav.cta": "Request a Quote",
+
+            "hero.studio": "— Digital studio",
+            "hero.loc": "São Paulo · Brazil",
+            "hero.title": "Turning ideas<br>into <em class=\"accent\">digital&nbsp;experiences</em>.",
+            "hero.lead": "We build modern websites, landing pages and web systems using React, JavaScript and current technologies — engineered to perform and accelerate results.",
+            "hero.ctaPrimary": "Request a Quote",
+            "hero.ctaGhost": "View Work",
+            "hero.cred1": "80+ projects delivered",
+            "hero.cred2": "7 years of experience",
+            "hero.cred3": "Conversion-focused",
+
+            "services.eyebrow": "Services",
+            "services.title": "What we build for you",
+            "services.desc": "Custom digital solutions, from concept to deploy, designed to perform and convert.",
+            "services.c1.title": "Landing Pages",
+            "services.c1.text": "Conversion-optimized landing pages with strategic copy, performance and results-driven design.",
+            "services.c1.tag": "High conversion",
+            "services.c2.title": "Institutional Websites",
+            "services.c2.text": "Fast, responsive and professional websites that convey credibility and strengthen your brand.",
+            "services.c2.tag": "Responsive",
+            "services.c3.title": "Web Systems",
+            "services.c3.text": "Custom solutions for companies: dashboards, platforms and internal tools that scale with the business.",
+            "services.c3.tag": "Custom-built",
+            "services.c4.title": "Automation",
+            "services.c4.text": "Integrations and automated processes that eliminate repetitive tasks and save your team time.",
+            "services.c4.tag": "Efficiency",
+
+            "tech.eyebrow": "Technologies",
+            "tech.title": "A modern, reliable stack",
+            "tech.desc": "We work with a proven ecosystem, ensuring maintainability, performance and longevity for your projects.",
+            "tech.rest": "REST APIs",
+
+            "about.quote": "“Technology that works in favor of your business.”",
+            "about.eyebrow": "About KIPPO",
+            "about.title": "Your technology partner",
+            "about.text1": "We're a team specialized in digital development, focused on performance, user experience and growth. We combine refined design with software engineering to deliver products that work — and scale.",
+            "about.text2": "We believe in straightforward solutions, clean code and lasting relationships. Every project is treated as a partnership: we understand your goals and turn challenges into measurable results.",
+            "about.l1": "Clean, maintainable code",
+            "about.l2": "Performance & SEO from day one",
+            "about.l3": "Clear communication, deadlines met",
+
+            "work.eyebrow": "Work",
+            "work.title": "Selected projects",
+            "work.desc": "A sample of recent work combining aesthetics, performance and purpose.",
+            "work.p1.title": "FinTech Dashboard",
+            "work.p1.text": "A financial management platform with real-time dashboards and automated reports.",
+            "work.p2.title": "Vértice Landing",
+            "work.p2.text": "A high-conversion landing page for a consulting startup, with A/B testing.",
+            "work.p2.t1": "Landing",
+            "work.p3.title": "Aura Automation",
+            "work.p3.text": "CRM-to-ERP integration that eliminated manual work and reduced errors by 90%.",
+            "work.p3.t1": "Automation",
+            "work.p4.title": "News Portal",
+            "work.p4.text": "A responsive institutional site for a media outlet, with a custom CMS.",
+            "work.p4.t1": "Website",
+
+            "test.eyebrow": "Testimonials",
+            "test.title": "What our clients say",
+            "test.q1": "“They delivered beyond expectations. The new site tripled our conversions in three months.”",
+            "test.r1": "Director · Vértice Consultoria",
+            "test.q2": "“Professionalism from brief to deploy. Automation that saves us hours every week.”",
+            "test.r2": "CEO · Aura Solutions",
+            "test.q3": "“Impeccable design and solid code. KIPPO became our official technology partner.”",
+
+            "cta.title": "Ready to bring your project to life?",
+            "cta.text": "Let's talk about your idea and find the best way to make it a reality.",
+            "cta.btn": "Talk to a specialist",
+
+            "footer.tagline": "Digital product development with performance and purpose.",
+            "footer.rights": "All rights reserved."
+        }
+    };
+
+    /* ---------- Aplica o idioma ---------- */
+    function setLang(lang) {
+        var dict = I18N[lang] || I18N.pt;
+
+        document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
+        document.title = dict._title;
+
+        setMeta('description', dict._desc);
+        setMetaProperty('og:title', dict._ogTitle);
+        setMetaProperty('og:description', dict._ogDesc);
+        setMetaProperty('og:locale', dict._ogLocale);
+
+        /* Textos simples */
+        document.querySelectorAll('[data-i18n]').forEach(function (el) {
+            var key = el.getAttribute('data-i18n');
+            if (key.charAt(0) === '_') return;
+            if (dict[key] != null) el.textContent = dict[key];
+        });
+        /* Textos com HTML */
+        document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+            var key = el.getAttribute('data-i18n-html');
+            if (dict[key] != null) el.innerHTML = dict[key];
+        });
+
+        /* Estado visual dos botões de idioma */
+        document.querySelectorAll('.lang__btn').forEach(function (btn) {
+            btn.classList.toggle('is-active', btn.getAttribute('data-lang') === lang);
+            btn.setAttribute('aria-pressed', String(btn.getAttribute('data-lang') === lang));
+        });
+
+        try { localStorage.setItem('kippo-lang', lang); } catch (e) {}
+    }
+
+    function setMeta(name, content) {
+        var m = document.querySelector('meta[name="' + name + '"]');
+        if (m) m.setAttribute('content', content);
+    }
+    function setMetaProperty(prop, content) {
+        var m = document.querySelector('meta[property="' + prop + '"]');
+        if (m) m.setAttribute('content', content);
+    }
+
+    /* ---------- Idioma inicial (salvo ou do navegador) ---------- */
+    var saved = null;
+    try { saved = localStorage.getItem('kippo-lang'); } catch (e) {}
+    var initial = saved || ((navigator.language || 'pt').slice(0, 2) === 'en' ? 'en' : 'pt');
+    setLang(initial);
+
+    document.querySelectorAll('.lang__btn').forEach(function (btn) {
+        btn.addEventListener('click', function () { setLang(btn.getAttribute('data-lang')); });
+    });
+
+    /* ---------- Header: sombra ao rolar ---------- */
+    var header = document.getElementById('header');
+    var onScroll = function () {
+        if (!header) return;
+        header.classList.toggle('is-scrolled', window.scrollY > 8);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    /* ---------- Menu mobile ---------- */
+    var toggle = document.getElementById('navToggle');
+    var nav = document.getElementById('nav');
+
+    var closeMenu = function () {
+        if (!toggle || !nav) return;
+        nav.classList.remove('is-open');
+        toggle.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+    };
+
+    if (toggle && nav) {
+        toggle.addEventListener('click', function () {
+            var open = nav.classList.toggle('is-open');
+            toggle.classList.toggle('is-open', open);
+            toggle.setAttribute('aria-expanded', String(open));
+            document.body.style.overflow = open ? 'hidden' : '';
+        });
+        nav.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', closeMenu);
+        });
+    }
+
+    /* ---------- Reveal on scroll ---------- */
+    var reveals = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+    if ('IntersectionObserver' in window && reveals.length) {
+        var io = new IntersectionObserver(function (entries, obs) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    var el = entry.target;
+                    var siblings = Array.prototype.slice.call(el.parentElement.children).filter(function (c) {
+                        return c.classList.contains('reveal');
+                    });
+                    var idx = siblings.indexOf(el);
+                    el.style.transitionDelay = Math.min(idx, 6) * 70 + 'ms';
+                    el.classList.add('is-visible');
+                    obs.unobserve(el);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        reveals.forEach(function (el) { io.observe(el); });
+    } else {
+        reveals.forEach(function (el) { el.classList.add('is-visible'); });
+    }
+
+    /* ---------- Ano no rodapé ---------- */
+    var yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    /* ---------- Fechar menu ao redimensionar para desktop ---------- */
+    var resizeTimer;
+    window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () {
+            if (window.innerWidth > 820) closeMenu();
+        }, 150);
+    });
+})();
