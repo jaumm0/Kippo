@@ -500,7 +500,28 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     position: relative;
     z-index: 1;
 }
+.project__img--cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.project__img--cover::after { display: none; }
+.project__img--cover .project__init { display: none; }
 .project__body { padding: 24px 26px 28px; }
+.project__more {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 18px;
+    font-size: .875rem;
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: none;
+    transition: gap .25s var(--ease), color .25s var(--ease);
+}
+.project__more:hover { color: var(--accent); gap: 11px; }
+.project__more .arrow { transition: transform .25s var(--ease); }
+.project__more:hover .arrow { transform: translateX(2px); }
 .project__title {
     font-size: 1.1875rem;
     font-weight: 600;
@@ -747,4 +768,93 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     .footer__contact { grid-column: auto; }
     .btn { width: 100%; }
     .hero__actions { width: 100%; }
+}
+/* ---------- Logo Cloud ---------- */
+.logo-cloud {
+    background: linear-gradient(180deg, #065F46 0%, #054733 100%);
+    padding: clamp(64px, 10vw, 120px) 0;
+    overflow: hidden;
+    position: relative;
+}
+.logo-cloud::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(60% 80% at 50% 0%, rgba(16,185,129,.18) 0%, transparent 70%);
+    pointer-events: none;
+}
+.logo-cloud__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+}
+.logo-cloud__head { text-align: center; margin-bottom: clamp(40px, 6vw, 64px); }
+.logo-cloud__eyebrow {
+    margin: 0 0 14px;
+    font-size: clamp(.78rem, 1.4vw, .875rem);
+    font-weight: 500;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.42);
+}
+.logo-cloud__title {
+    margin: 0;
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    font-weight: 600;
+    letter-spacing: -.02em;
+    line-height: 1.15;
+    background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.62));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+.logo-cloud__rows { display: flex; flex-direction: column; gap: clamp(20px, 3vw, 34px); }
+
+.marquee {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
+}
+.marquee__track {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    align-items: center;
+    gap: clamp(36px, 6vw, 72px);
+    padding-right: clamp(36px, 6vw, 72px);
+    will-change: transform;
+    animation: marquee-scroll 38s linear infinite;
+}
+.marquee--reverse .marquee__track {
+    animation-direction: reverse;
+    animation-duration: 46s;
+}
+@keyframes marquee-scroll {
+    from { transform: translate3d(0, 0, 0); }
+    to   { transform: translate3d(-50%, 0, 0); }
+}
+.logo {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    opacity: .6;
+    filter: grayscale(1) brightness(1);
+    transition: opacity .25s ease, filter .25s ease, transform .25s ease;
+    user-select: none;
+}
+.logo svg { height: clamp(22px, 3.4vw, 30px); width: auto; display: block; }
+.logo:hover { opacity: 1; filter: grayscale(0) brightness(1.15); transform: translateY(-1px); }
+.marquee.is-paused .marquee__track { animation-play-state: paused; }
+
+@media (max-width: 640px) {
+    .marquee__track { animation-duration: 30s; }
+    .marquee--reverse .marquee__track { animation-duration: 36s; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .marquee__track { animation: none; transform: none; justify-content: center; width: 100%; }
 }

@@ -35,6 +35,9 @@
             "hero.cred2": "7 anos de experiência",
             "hero.cred3": "Foco em conversão",
 
+            "logocloud.eyebrow": "Empresas que confiam",
+            "logocloud.title": "Marcas que crescem com a gente",
+
             "services.eyebrow": "Serviços",
             "services.title": "O que construímos para você",
             "services.desc": "Soluções digitais sob medida, do conceito ao deploy, pensadas para performar e converter.",
@@ -70,6 +73,7 @@
             "work.desc": "Uma amostra de trabalhos recentes que unem estética, performance e propósito.",
             "work.p1.title": "Aurora Odontologia",
             "work.p1.text": "Landing page premium para clínica odontológica de alto padrão em São Paulo, com design clean e foco em agendamentos via WhatsApp.",
+            "work.p1.more": "Ver mais",
             "work.p2.title": "Landing Vértice",
             "work.p2.text": "Landing page de alta conversão para startup de consultoria, com A/B testing.",
             "work.p2.t1": "Landing",
@@ -119,6 +123,9 @@
             "hero.cred2": "7 years of experience",
             "hero.cred3": "Conversion-focused",
 
+            "logocloud.eyebrow": "Trusted by teams",
+            "logocloud.title": "Brands growing with us",
+
             "services.eyebrow": "Services",
             "services.title": "What we build for you",
             "services.desc": "Custom digital solutions, from concept to deploy, designed to perform and convert.",
@@ -154,6 +161,7 @@
             "work.desc": "A sample of recent work combining aesthetics, performance and purpose.",
             "work.p1.title": "Aurora Odontologia",
             "work.p1.text": "Premium landing page for a high-end dental clinic in São Paulo, with clean design and WhatsApp-driven appointment booking.",
+            "work.p1.more": "View more",
             "work.p2.title": "Vértice Landing",
             "work.p2.text": "A high-conversion landing page for a consulting startup, with A/B testing.",
             "work.p2.t1": "Landing",
@@ -288,6 +296,50 @@
     } else {
         reveals.forEach(function (el) { el.classList.add('is-visible'); });
     }
+
+    /* ---------- Logo Cloud (marquee infinito) ---------- */
+    var LC_LOGOS = [
+        { name: "Northwind", icon: '<path d="M14 3l9 5v12l-9 5-9-5V8l9-5zm0 3.2L8 9.5v9l6 3.3 6-3.3v-9l-6-2.3z" fill-rule="evenodd"/>' },
+        { name: "Lumina", icon: '<circle cx="14" cy="14" r="5"/><path d="M14 2v4M14 22v4M2 14h4M22 14h4M5.6 5.6l2.8 2.8M19.6 19.6l2.8 2.8M22.4 5.6l-2.8 2.8M8.4 19.6l-2.8 2.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>' },
+        { name: "Vertex", icon: '<path d="M14 4l10 20H4L14 4z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>' },
+        { name: "Quanta", icon: '<circle cx="14" cy="14" r="10" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="14" cy="14" r="4"/>' },
+        { name: "Helios", icon: '<circle cx="14" cy="14" r="9" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="14" cy="14" r="3.2"/>' },
+        { name: "Monogram", icon: '<rect x="4" y="4" width="14" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2.2"/><rect x="10" y="10" width="14" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2.2"/>' },
+        { name: "Cobalt", icon: '<path d="M14 3l10 11-10 11L4 14 14 3z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>' },
+        { name: "Apex", icon: '<path d="M14 5l9 17H5L14 5z"/>' },
+        { name: "Stratus", icon: '<rect x="4" y="7" width="20" height="3" rx="1.5"/><rect x="4" y="13" width="20" height="3" rx="1.5" opacity="0.7"/><rect x="4" y="19" width="13" height="3" rx="1.5" opacity="0.45"/>' },
+        { name: "Kindred", icon: '<circle cx="10" cy="14" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="18" cy="14" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/>' },
+        { name: "Orbit", icon: '<ellipse cx="14" cy="14" rx="12" ry="6" fill="none" stroke="currentColor" stroke-width="2.2" transform="rotate(-30 14 14)"/><circle cx="22" cy="9" r="2.6"/>' },
+        { name: "Nimbus", icon: '<rect x="4" y="4" width="20" height="20" rx="6" fill="none" stroke="currentColor" stroke-width="2.2"/>' }
+    ];
+
+    function lcSvg(logo) {
+        var iconBox = 28;
+        var textX = iconBox + 8;
+        var textWidth = Math.round(logo.name.length * 9.2) + 6;
+        var width = textX + textWidth;
+        return '<svg viewBox="0 0 ' + width + ' 28" height="28" role="img" aria-label="' + logo.name + '" xmlns="http://www.w3.org/2000/svg">' +
+            '<g fill="currentColor">' + logo.icon + '</g>' +
+            '<text x="' + textX + '" y="20" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="17" font-weight="600" letter-spacing="-0.3" fill="currentColor">' + logo.name + '</text>' +
+            '</svg>';
+    }
+
+    function lcFill(trackEl, set) {
+        if (!trackEl) return;
+        var items = set.concat(set); /* duplicado → loop seamless em -50% */
+        trackEl.innerHTML = items.map(function (logo) {
+            return '<span class="logo">' + lcSvg(logo) + '</span>';
+        }).join('');
+    }
+
+    var lcMid = Math.ceil(LC_LOGOS.length / 2);
+    lcFill(document.querySelector('[data-row="top"]'), LC_LOGOS.slice(0, lcMid));
+    lcFill(document.querySelector('[data-row="bottom"]'), LC_LOGOS.slice(lcMid));
+
+    document.querySelectorAll('.marquee').forEach(function (row) {
+        row.addEventListener('mouseenter', function () { row.classList.add('is-paused'); });
+        row.addEventListener('mouseleave', function () { row.classList.remove('is-paused'); });
+    });
 
     /* ---------- Ano no rodapé ---------- */
     var yearEl = document.getElementById('year');
