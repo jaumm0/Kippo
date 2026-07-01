@@ -71,18 +71,22 @@
             "work.eyebrow": "Portfólio",
             "work.title": "Projetos selecionados",
             "work.desc": "Uma amostra de trabalhos recentes que unem estética, performance e propósito.",
+            "work.more": "Ver mais",
             "work.p1.title": "Aurora Odontologia",
             "work.p1.text": "Landing page premium para clínica odontológica de alto padrão em São Paulo, com design clean e foco em agendamentos via WhatsApp.",
             "work.p1.more": "Ver mais",
-            "work.p2.title": "Landing Vértice",
-            "work.p2.text": "Landing page de alta conversão para startup de consultoria, com A/B testing.",
-            "work.p2.t1": "Landing",
-            "work.p3.title": "Automação Aura",
-            "work.p3.text": "Integração entre CRM e ERP eliminando trabalho manual e reduzindo erros em 90%.",
-            "work.p3.t1": "Automação",
-            "work.p4.title": "Portal Notícia",
-            "work.p4.text": "Site institucional responsivo para veículo de comunicação, com CMS customizado.",
-            "work.p4.t1": "Site",
+            "work.p2.title": "Prime Fitness Universitário",
+            "work.p2.text": "Landing page premium para academia, com estética old country e minimalista contemporânea — madeira nobre, couro e ferro escovado. Foco em planos e conversão.",
+            "work.p2.more": "Ver mais",
+            "work.p3.title": "Landing Vértice",
+            "work.p3.text": "Landing page de alta conversão para startup de consultoria, com A/B testing.",
+            "work.p3.t1": "Landing",
+            "work.p4.title": "Automação Aura",
+            "work.p4.text": "Integração entre CRM e ERP eliminando trabalho manual e reduzindo erros em 90%.",
+            "work.p4.t1": "Automação",
+            "work.p5.title": "Portal Notícia",
+            "work.p5.text": "Site institucional responsivo para veículo de comunicação, com CMS customizado.",
+            "work.p5.t1": "Site",
 
             "test.eyebrow": "Depoimentos",
             "test.title": "O que dizem nossos clientes",
@@ -97,7 +101,8 @@
             "cta.btn": "Falar com um especialista",
 
             "footer.tagline": "Desenvolvimento de produtos digitais com performance e propósito.",
-            "footer.rights": "Todos os direitos reservados."
+            "footer.rights": "Todos os direitos reservados.",
+            "proj.back": "Voltar ao portfólio"
         },
         en: {
             _title: "KIPPO — Web Development: Sites, Landing Pages & Web Systems",
@@ -159,18 +164,22 @@
             "work.eyebrow": "Work",
             "work.title": "Selected projects",
             "work.desc": "A sample of recent work combining aesthetics, performance and purpose.",
+            "work.more": "View more",
             "work.p1.title": "Aurora Odontologia",
             "work.p1.text": "Premium landing page for a high-end dental clinic in São Paulo, with clean design and WhatsApp-driven appointment booking.",
             "work.p1.more": "View more",
-            "work.p2.title": "Vértice Landing",
-            "work.p2.text": "A high-conversion landing page for a consulting startup, with A/B testing.",
-            "work.p2.t1": "Landing",
-            "work.p3.title": "Aura Automation",
-            "work.p3.text": "CRM-to-ERP integration that eliminated manual work and reduced errors by 90%.",
-            "work.p3.t1": "Automation",
-            "work.p4.title": "News Portal",
-            "work.p4.text": "A responsive institutional site for a media outlet, with a custom CMS.",
-            "work.p4.t1": "Website",
+            "work.p2.title": "Prime Fitness Universitário",
+            "work.p2.text": "Premium landing page for a gym, with an old-country yet contemporary minimalist aesthetic — noble wood, leather and brushed steel. Focused on plans and conversion.",
+            "work.p2.more": "View more",
+            "work.p3.title": "Vértice Landing",
+            "work.p3.text": "A high-conversion landing page for a consulting startup, with A/B testing.",
+            "work.p3.t1": "Landing",
+            "work.p4.title": "Aura Automation",
+            "work.p4.text": "CRM-to-ERP integration that eliminated manual work and reduced errors by 90%.",
+            "work.p4.t1": "Automation",
+            "work.p5.title": "News Portal",
+            "work.p5.text": "A responsive institutional site for a media outlet, with a custom CMS.",
+            "work.p5.t1": "Website",
 
             "test.eyebrow": "Testimonials",
             "test.title": "What our clients say",
@@ -185,7 +194,8 @@
             "cta.btn": "Talk to a specialist",
 
             "footer.tagline": "Digital product development with performance and purpose.",
-            "footer.rights": "All rights reserved."
+            "footer.rights": "All rights reserved.",
+            "proj.back": "Back to portfolio"
         }
     };
 
