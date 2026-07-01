@@ -672,6 +672,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     color: var(--white);
     transform: translateY(-3px);
 }
+.footer__credit {
+    align-self: center;
+    font-size: .85rem;
+    font-weight: 500;
+    color: rgba(255,255,255,.82);
+    text-decoration: none;
+    padding-left: 4px;
+    transition: color .25s var(--ease);
+}
+.footer__credit:hover { color: var(--green); }
 .footer__bottom { border-top: 1px solid rgba(255,255,255,.1); }
 .footer__bottom .container { padding: 22px 24px; }
 .footer__bottom p { font-size: .8125rem; color: rgba(255,255,255,.5); }

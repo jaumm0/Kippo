@@ -26,7 +26,7 @@
             "nav.cta": "Solicitar Orçamento",
 
             "hero.studio": "— Estúdio digital",
-            "hero.loc": "São Paulo · Brasil",
+            "hero.loc": "Campo Grande · MS",
             "hero.title": "Transformamos ideias<br>em <em class=\"accent\">experiências&nbsp;digitais</em>.",
             "hero.lead": "Criamos sites, landing pages e sistemas modernos com React, JavaScript e tecnologias atuais — projetados para performar e acelerar resultados.",
             "hero.ctaPrimary": "Solicitar Orçamento",
@@ -119,7 +119,7 @@
             "nav.cta": "Request a Quote",
 
             "hero.studio": "— Digital studio",
-            "hero.loc": "São Paulo · Brazil",
+            "hero.loc": "Campo Grande · MS",
             "hero.title": "Turning ideas<br>into <em class=\"accent\">digital&nbsp;experiences</em>.",
             "hero.lead": "We build modern websites, landing pages and web systems using React, JavaScript and current technologies — engineered to perform and accelerate results.",
             "hero.ctaPrimary": "Request a Quote",
