@@ -672,19 +672,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     color: var(--white);
     transform: translateY(-3px);
 }
-.footer__credit {
-    align-self: center;
-    font-size: .85rem;
-    font-weight: 500;
-    color: rgba(255,255,255,.82);
-    text-decoration: none;
-    padding-left: 4px;
-    transition: color .25s var(--ease);
-}
-.footer__credit:hover { color: var(--green); }
 .footer__bottom { border-top: 1px solid rgba(255,255,255,.1); }
 .footer__bottom .container { padding: 22px 24px; }
 .footer__bottom p { font-size: .8125rem; color: rgba(255,255,255,.5); }
+.footer__madeby {
+    color: rgba(255,255,255,.7);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color .25s var(--ease);
+}
+.footer__madeby:hover { color: var(--green); }
 
 /* ---------- Floating WhatsApp ---------- */
 .float-whats {
@@ -1110,4 +1107,88 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     .proj-hero__cover { aspect-ratio: 16 / 10; }
     .proj-actions { flex-direction: column; }
     .proj-actions .btn { width: 100%; }
+}
+
+/* ---------- Intro: logo se monta ---------- */
+body.is-intro { overflow: hidden; }
+
+.intro {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    background: #000;
+    overflow: hidden;
+    transition: opacity .6s var(--ease), visibility .6s var(--ease);
+}
+.intro.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+
+.intro__glow {
+    position: absolute;
+    width: 70vmax; height: 70vmax;
+    background: radial-gradient(circle, rgba(16,185,129,.18) 0%, transparent 62%);
+    filter: blur(8px);
+    opacity: 0;
+    animation: intro-glow 1.2s ease forwards;
+    animation-delay: .1s;
+    pointer-events: none;
+}
+@keyframes intro-glow { to { opacity: 1; } }
+
+.intro__logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.intro__dot {
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: var(--green);
+    opacity: 0;
+    transform: scale(0) rotate(-220deg);
+    animation: intro-dot .8s cubic-bezier(.2,.8,.2,1) forwards;
+    animation-delay: .15s;
+    box-shadow: 0 0 18px rgba(16,185,129,.55);
+}
+@keyframes intro-dot { to { opacity: 1; transform: scale(1) rotate(0); } }
+
+.intro__word {
+    display: inline-flex;
+    gap: .04em;
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    font-weight: 700;
+    font-size: clamp(2.4rem, 8vw, 4rem);
+    color: #fff;
+    letter-spacing: .02em;
+}
+
+.intro__char {
+    display: inline-block;
+    opacity: 0;
+    transform: translate(calc(var(--i) * 30px - 60px), -55px) rotate(calc(var(--i) * 32deg - 64deg)) scale(.5);
+    filter: blur(7px);
+    animation: intro-assemble .9s cubic-bezier(.2,.85,.2,1) forwards;
+    animation-delay: calc(var(--i) * 0.09s + 0.25s);
+}
+@keyframes intro-assemble {
+    to {
+        opacity: 1;
+        transform: translate(0, 0) rotate(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+/* Uma vez montada, a logo "respira" antes da página revelar */
+.intro__logo.is-assembled { animation: intro-breathe .6s ease forwards; animation-delay: .1s; }
+@keyframes intro-breathe {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .intro__char, .intro__dot, .intro__glow { animation: none; opacity: 1; transform: none; filter: none; }
+    .intro__glow { opacity: .6; }
 }

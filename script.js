@@ -9,6 +9,48 @@
 (function () {
     'use strict';
 
+    /* ---------- Intro: a logo se monta e revela a página ---------- */
+    var intro = document.getElementById('intro');
+    if (intro) {
+        var alreadyPlayed = false;
+        try { alreadyPlayed = sessionStorage.getItem('kippo-intro') === 'done'; } catch (e) {}
+        var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (alreadyPlayed || reduceMotion) {
+            /* pula a intro */
+            intro.parentNode && intro.parentNode.removeChild(intro);
+        } else {
+            document.body.classList.add('is-intro');
+            try { sessionStorage.setItem('kippo-intro', 'done'); } catch (e) {}
+
+            var finished = false;
+            function finishIntro() {
+                if (finished) return;
+                finished = true;
+                intro.classList.add('is-hidden');
+                document.body.classList.remove('is-intro');
+                setTimeout(function () {
+                    if (intro && intro.parentNode) intro.parentNode.removeChild(intro);
+                }, 700);
+            }
+
+            /* marca a logo como montada para o "respiro" antes de revelar */
+            setTimeout(function () {
+                var logo = intro.querySelector('.intro__logo');
+                if (logo) logo.classList.add('is-assembled');
+            }, 1600);
+
+            /* revela a página depois da animação */
+            setTimeout(finishIntro, 2100);
+
+            /* permite pular com Esc ou clique */
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') finishIntro();
+            });
+            intro.addEventListener('click', finishIntro);
+        }
+    }
+
     /* ---------- Dicionário de traduções ---------- */
     var I18N = {
         pt: {
@@ -102,6 +144,7 @@
 
             "footer.tagline": "Desenvolvimento de produtos digitais com performance e propósito.",
             "footer.rights": "Todos os direitos reservados.",
+            "footer.madeby": "Feito por",
             "proj.back": "Voltar ao portfólio"
         },
         en: {
@@ -195,6 +238,7 @@
 
             "footer.tagline": "Digital product development with performance and purpose.",
             "footer.rights": "All rights reserved.",
+            "footer.madeby": "Built by",
             "proj.back": "Back to portfolio"
         }
     };
