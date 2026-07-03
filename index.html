@@ -19,8 +19,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="icon" type="image/png" href="favcon/ChatGPT Image 24 de jun. de 2026, 07_44_21.png">
-    <link rel="apple-touch-icon" href="favcon/ChatGPT Image 24 de jun. de 2026, 07_44_21.png">
+    <link rel="icon" type="image/png" href="favcon/kippo.png">
+    <link rel="apple-touch-icon" href="favcon/kippo.png">
     <link rel="stylesheet" href="styles.css">
 
     <!-- Schema.org -->
@@ -37,12 +37,14 @@
 </head>
 <body>
 
+    <a class="skip-link" href="#inicio" data-i18n="nav.skip">Pular para conteúdo</a>
+
     <!-- INTRO: a logo se monta no centro e depois revela a página -->
-    <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro" id="intro">
         <div class="intro__glow" aria-hidden="true"></div>
         <div class="intro__logo">
             <span class="intro__dot" aria-hidden="true"></span>
-            <span class="intro__word">
+            <span class="intro__word" aria-hidden="true">
                 <span class="intro__char" style="--i:0">K</span>
                 <span class="intro__char" style="--i:1">I</span>
                 <span class="intro__char" style="--i:2">P</span>
@@ -50,6 +52,7 @@
                 <span class="intro__char" style="--i:4">O</span>
             </span>
         </div>
+        <button class="intro__skip" type="button" data-i18n="intro.skip">Pular</button>
     </div>
 
     <!-- HEADER -->
@@ -71,10 +74,10 @@
 
             <div class="lang" role="group" aria-label="Selecionar idioma">
                 <button type="button" class="lang__btn is-active" data-lang="pt" aria-label="Português" title="Português">
-                    <span class="lang__flag">🇧🇷</span><span class="lang__code">PT</span>
+                    <span class="lang__code">PT</span>
                 </button>
                 <button type="button" class="lang__btn" data-lang="en" aria-label="English" title="English">
-                    <span class="lang__flag">🇺🇸</span><span class="lang__code">EN</span>
+                    <span class="lang__code">EN</span>
                 </button>
             </div>
 
@@ -87,11 +90,11 @@
     <main>
 
         <!-- HERO -->
-        <section class="hero" id="inicio">
+        <section class="hero" id="inicio" tabindex="-1">
             <div class="container hero__inner">
 
                 <div class="hero__meta reveal">
-                    <span class="hero__index">01 <span class="hero__index-dim" data-i18n="hero.studio">— Estúdio digital</span></span>
+                    <span class="hero__index" data-i18n="hero.studio">Estúdio digital</span>
                     <span class="hero__loc" data-i18n="hero.loc">Campo Grande · MS</span>
                 </div>
 
@@ -118,7 +121,6 @@
         <section class="logo-cloud" aria-label="Logo cloud">
             <div class="logo-cloud__inner">
                 <div class="logo-cloud__head">
-                    <p class="logo-cloud__eyebrow reveal" data-i18n="logocloud.eyebrow">Empresas que confiam</p>
                     <h2 class="logo-cloud__title reveal" data-i18n="logocloud.title">Marcas que crescem com a gente</h2>
                 </div>
                 <div class="logo-cloud__rows">
@@ -136,35 +138,30 @@
         <section class="section" id="servicos">
             <div class="container">
                 <div class="section__head">
-                    <p class="section__eyebrow reveal" data-i18n="services.eyebrow">Serviços</p>
                     <h2 class="section__title reveal" data-i18n="services.title">O que construímos para você</h2>
                     <p class="section__desc reveal" data-i18n="services.desc">Soluções digitais sob medida, do conceito ao deploy, pensadas para performar e converter.</p>
                 </div>
 
                 <div class="grid grid--services">
                     <article class="card reveal">
-                        <div class="card__icon">🚀</div>
                         <h3 class="card__title" data-i18n="services.c1.title">Landing Pages</h3>
                         <p class="card__text" data-i18n="services.c1.text">Landing pages otimizadas para conversão, com copy estratégica, performance e design orientado a resultados.</p>
                         <span class="card__tag" data-i18n="services.c1.tag">Alta conversão</span>
                     </article>
 
                     <article class="card reveal">
-                        <div class="card__icon">💻</div>
                         <h3 class="card__title" data-i18n="services.c2.title">Sites Institucionais</h3>
                         <p class="card__text" data-i18n="services.c2.text">Sites rápidos, responsivos e profissionais que transmitem credibilidade e fortalecem sua marca.</p>
                         <span class="card__tag" data-i18n="services.c2.tag">Responsivo</span>
                     </article>
 
                     <article class="card reveal">
-                        <div class="card__icon">⚡</div>
                         <h3 class="card__title" data-i18n="services.c3.title">Sistemas Web</h3>
                         <p class="card__text" data-i18n="services.c3.text">Soluções sob medida para empresas: painéis, plataformas e ferramentas internas que escalam com o negócio.</p>
                         <span class="card__tag" data-i18n="services.c3.tag">Sob medida</span>
                     </article>
 
                     <article class="card reveal">
-                        <div class="card__icon">🤖</div>
                         <h3 class="card__title" data-i18n="services.c4.title">Automação</h3>
                         <p class="card__text" data-i18n="services.c4.text">Integrações e processos automatizados que eliminam tarefas repetitivas e economizam tempo da equipe.</p>
                         <span class="card__tag" data-i18n="services.c4.tag">Eficiência</span>
@@ -177,7 +174,6 @@
         <section class="section section--alt" id="tecnologias">
             <div class="container">
                 <div class="section__head">
-                    <p class="section__eyebrow reveal" data-i18n="tech.eyebrow">Tecnologias</p>
                     <h2 class="section__title reveal" data-i18n="tech.title">Stack moderna e confiável</h2>
                     <p class="section__desc reveal" data-i18n="tech.desc">Trabalhamos com um ecossistema consolidado, garantindo manutenção, performance e longevidade aos seus projetos.</p>
                 </div>
@@ -204,7 +200,6 @@
                     </div>
                 </div>
                 <div class="sobre__content">
-                    <p class="section__eyebrow reveal" data-i18n="about.eyebrow">Sobre a KIPPO</p>
                     <h2 class="section__title reveal" data-i18n="about.title">Sua parceira tecnológica</h2>
                     <p class="sobre__text reveal" data-i18n="about.text1">Somos uma equipe especializada em desenvolvimento digital, com foco em performance, experiência do usuário e crescimento. Unimos design refinado à engenharia de software para entregar produtos que funcionam — e que escalam.</p>
                     <p class="sobre__text reveal" data-i18n="about.text2">Acreditamos em soluções diretas, código limpo e relacionamentos duradouros. Cada projeto é tratado como uma parceria: entendemos seus objetivos e transformamos desafios em resultados mensuráveis.</p>
@@ -294,7 +289,6 @@
         <section class="section" id="depoimentos">
             <div class="container">
                 <div class="section__head">
-                    <p class="section__eyebrow reveal" data-i18n="test.eyebrow">Depoimentos</p>
                     <h2 class="section__title reveal" data-i18n="test.title">O que dizem nossos clientes</h2>
                 </div>
 

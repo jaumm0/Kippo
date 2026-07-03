@@ -9,3 +9,9 @@ Thumbs.db
 
 # Dependências (caso adicione ferramentas no futuro)
 node_modules/
+
+# Tooling local do impeccable skill (agentes, snapshots, config de live mode)
+.agents/
+.claude/
+.impeccable/
+skills-lock.json

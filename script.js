@@ -67,9 +67,11 @@
             "nav.contact": "Contato",
             "nav.cta": "Solicitar Orçamento",
 
-            "hero.studio": "— Estúdio digital",
+            "hero.studio": "Estúdio digital",
             "hero.loc": "Campo Grande · MS",
-            "hero.title": "Transformamos ideias<br>em <em class=\"accent\">experiências&nbsp;digitais</em>.",
+            "intro.skip": "Pular",
+            "nav.skip": "Pular para conteúdo",
+            "hero.title": "Transformamos ideias<br>em <em class=\"accent\">experiências digitais</em>.",
             "hero.lead": "Criamos sites, landing pages e sistemas modernos com React, JavaScript e tecnologias atuais — projetados para performar e acelerar resultados.",
             "hero.ctaPrimary": "Solicitar Orçamento",
             "hero.ctaGhost": "Ver Projetos",
@@ -77,10 +79,8 @@
             "hero.cred2": "7 anos de experiência",
             "hero.cred3": "Foco em conversão",
 
-            "logocloud.eyebrow": "Empresas que confiam",
             "logocloud.title": "Marcas que crescem com a gente",
 
-            "services.eyebrow": "Serviços",
             "services.title": "O que construímos para você",
             "services.desc": "Soluções digitais sob medida, do conceito ao deploy, pensadas para performar e converter.",
             "services.c1.title": "Landing Pages",
@@ -96,13 +96,11 @@
             "services.c4.text": "Integrações e processos automatizados que eliminam tarefas repetitivas e economizam tempo da equipe.",
             "services.c4.tag": "Eficiência",
 
-            "tech.eyebrow": "Tecnologias",
             "tech.title": "Stack moderna e confiável",
             "tech.desc": "Trabalhamos com um ecossistema consolidado, garantindo manutenção, performance e longevidade aos seus projetos.",
             "tech.rest": "APIs REST",
 
             "about.quote": "“Tecnologia que trabalha a favor do seu negócio.”",
-            "about.eyebrow": "Sobre a KIPPO",
             "about.title": "Sua parceira tecnológica",
             "about.text1": "Somos uma equipe especializada em desenvolvimento digital, com foco em performance, experiência do usuário e crescimento. Unimos design refinado à engenharia de software para entregar produtos que funcionam — e que escalam.",
             "about.text2": "Acreditamos em soluções diretas, código limpo e relacionamentos duradouros. Cada projeto é tratado como uma parceria: entendemos seus objetivos e transformamos desafios em resultados mensuráveis.",
@@ -130,7 +128,6 @@
             "work.p5.text": "Site institucional responsivo para veículo de comunicação, com CMS customizado.",
             "work.p5.t1": "Site",
 
-            "test.eyebrow": "Depoimentos",
             "test.title": "O que dizem nossos clientes",
             "test.q1": "“Entregaram além do esperado. O novo site triplicou nossas conversões em três meses.”",
             "test.r1": "Diretora · Vértice Consultoria",
@@ -161,9 +158,11 @@
             "nav.contact": "Contact",
             "nav.cta": "Request a Quote",
 
-            "hero.studio": "— Digital studio",
+            "hero.studio": "Digital studio",
             "hero.loc": "Campo Grande · MS",
-            "hero.title": "Turning ideas<br>into <em class=\"accent\">digital&nbsp;experiences</em>.",
+            "intro.skip": "Skip",
+            "nav.skip": "Skip to content",
+            "hero.title": "Turning ideas<br>into <em class=\"accent\">digital experiences</em>.",
             "hero.lead": "We build modern websites, landing pages and web systems using React, JavaScript and current technologies — engineered to perform and accelerate results.",
             "hero.ctaPrimary": "Request a Quote",
             "hero.ctaGhost": "View Work",
@@ -171,10 +170,8 @@
             "hero.cred2": "7 years of experience",
             "hero.cred3": "Conversion-focused",
 
-            "logocloud.eyebrow": "Trusted by teams",
             "logocloud.title": "Brands growing with us",
 
-            "services.eyebrow": "Services",
             "services.title": "What we build for you",
             "services.desc": "Custom digital solutions, from concept to deploy, designed to perform and convert.",
             "services.c1.title": "Landing Pages",
@@ -190,13 +187,11 @@
             "services.c4.text": "Integrations and automated processes that eliminate repetitive tasks and save your team time.",
             "services.c4.tag": "Efficiency",
 
-            "tech.eyebrow": "Technologies",
             "tech.title": "A modern, reliable stack",
             "tech.desc": "We work with a proven ecosystem, ensuring maintainability, performance and longevity for your projects.",
             "tech.rest": "REST APIs",
 
             "about.quote": "“Technology that works in favor of your business.”",
-            "about.eyebrow": "About KIPPO",
             "about.title": "Your technology partner",
             "about.text1": "We're a team specialized in digital development, focused on performance, user experience and growth. We combine refined design with software engineering to deliver products that work — and scale.",
             "about.text2": "We believe in straightforward solutions, clean code and lasting relationships. Every project is treated as a partnership: we understand your goals and turn challenges into measurable results.",
@@ -224,7 +219,6 @@
             "work.p5.text": "A responsive institutional site for a media outlet, with a custom CMS.",
             "work.p5.t1": "Website",
 
-            "test.eyebrow": "Testimonials",
             "test.title": "What our clients say",
             "test.q1": "“They delivered beyond expectations. The new site tripled our conversions in three months.”",
             "test.r1": "Director · Vértice Consultoria",

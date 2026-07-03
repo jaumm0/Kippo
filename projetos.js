@@ -362,12 +362,14 @@
 
     /* Animações on-scroll próprias (o script.js roda antes e já montou
        seu observer antes do conteúdo existir, então observamos aqui) */
+    var revealIO = null;
     function setupReveal() {
         var els = document.querySelectorAll('#projeto-root .reveal');
         if (!('IntersectionObserver' in window)) {
             els.forEach(function (el) { el.classList.add('is-visible'); });
             return;
         }
+        if (revealIO) { revealIO.disconnect(); }
         var io = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry, idx) {
                 if (entry.isIntersecting) {
@@ -377,6 +379,7 @@
                 }
             });
         }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        revealIO = io;
         els.forEach(function (el) { io.observe(el); });
     }
     setupReveal();
