@@ -1,0 +1,242 @@
+{
+  "kippo-react/jsconfig.json": {
+    "mtime": 1783094233.2037208,
+    "ast_hash": "f782021777a535bc01a27664cfebdac7",
+    "semantic_hash": "f782021777a535bc01a27664cfebdac7"
+  },
+  "kippo-react/package.json": {
+    "mtime": 1783094230.8466518,
+    "ast_hash": "4d945599c009c630df6ff8a387ba0895",
+    "semantic_hash": "4d945599c009c630df6ff8a387ba0895"
+  },
+  "kippo-react/postcss.config.js": {
+    "mtime": 1783094231.966617,
+    "ast_hash": "49826fd81914632ba3a62a448c5bf51c",
+    "semantic_hash": "49826fd81914632ba3a62a448c5bf51c"
+  },
+  "kippo-react/src/App.jsx": {
+    "mtime": 1783347054.292347,
+    "ast_hash": "84a84a58abca7fc09f94d6799a59b28e",
+    "semantic_hash": "84a84a58abca7fc09f94d6799a59b28e"
+  },
+  "kippo-react/src/components/AnimatedRoutes.jsx": {
+    "mtime": 1783102527.7125804,
+    "ast_hash": "4be9b1ba3bdcb53a23ae8c1e4e3983a7",
+    "semantic_hash": "4be9b1ba3bdcb53a23ae8c1e4e3983a7"
+  },
+  "kippo-react/src/components/CTA.jsx": {
+    "mtime": 1783100764.971276,
+    "ast_hash": "3e0f51dff0f1ea83321188d5eecd840c",
+    "semantic_hash": "3e0f51dff0f1ea83321188d5eecd840c"
+  },
+  "kippo-react/src/components/FloatWhats.jsx": {
+    "mtime": 1783094736.3258116,
+    "ast_hash": "222ff10826de0eb76b9dc3aa6420ff98",
+    "semantic_hash": "222ff10826de0eb76b9dc3aa6420ff98"
+  },
+  "kippo-react/src/components/Footer.jsx": {
+    "mtime": 1783347073.9031084,
+    "ast_hash": "c756f4a223264ce437e0de1fd6ef1cd5",
+    "semantic_hash": "c756f4a223264ce437e0de1fd6ef1cd5"
+  },
+  "kippo-react/src/components/Header.jsx": {
+    "mtime": 1783347638.2682264,
+    "ast_hash": "fc21f62f2d68150166fa01f9f92557b5",
+    "semantic_hash": "fc21f62f2d68150166fa01f9f92557b5"
+  },
+  "kippo-react/src/components/Hero.jsx": {
+    "mtime": 1783353576.2024505,
+    "ast_hash": "001c3bb7b1f35f25cd1a909f69635475",
+    "semantic_hash": "001c3bb7b1f35f25cd1a909f69635475"
+  },
+  "kippo-react/src/components/Intro.jsx": {
+    "mtime": 1783167124.4810393,
+    "ast_hash": "2779737f69e6300a270bede990152cbe",
+    "semantic_hash": "2779737f69e6300a270bede990152cbe"
+  },
+  "kippo-react/src/components/LogoCloud.jsx": {
+    "mtime": 1783094738.4954736,
+    "ast_hash": "4e3532388d9609e7551e589a22e8b869",
+    "semantic_hash": "4e3532388d9609e7551e589a22e8b869"
+  },
+  "kippo-react/src/components/Portfolio.jsx": {
+    "mtime": 1783361273.6411657,
+    "ast_hash": "602dc37dd845a5acc3d7f1fb0c20ca89",
+    "semantic_hash": "602dc37dd845a5acc3d7f1fb0c20ca89"
+  },
+  "kippo-react/src/components/ProjectCard.jsx": {
+    "mtime": 1783100757.439121,
+    "ast_hash": "37b3d02ff4d91201480f37ba870c0fb1",
+    "semantic_hash": "37b3d02ff4d91201480f37ba870c0fb1"
+  },
+  "kippo-react/src/components/Reveal.jsx": {
+    "mtime": 1783094535.658563,
+    "ast_hash": "bdab589353ea5c6101563617412aec9e",
+    "semantic_hash": "bdab589353ea5c6101563617412aec9e"
+  },
+  "kippo-react/src/components/Select.jsx": {
+    "mtime": 1783104483.5361595,
+    "ast_hash": "5facfaea9b717a8ec11eb83ad7745341",
+    "semantic_hash": "5facfaea9b717a8ec11eb83ad7745341"
+  },
+  "kippo-react/src/components/Services.jsx": {
+    "mtime": 1783352321.0140889,
+    "ast_hash": "8e0c60043b71ee98c8d18c304f6dab29",
+    "semantic_hash": "8e0c60043b71ee98c8d18c304f6dab29"
+  },
+  "kippo-react/src/components/Tech.jsx": {
+    "mtime": 1783438372.333132,
+    "ast_hash": "b198d70d0e714db7b53a8e31bce167f9",
+    "semantic_hash": "b198d70d0e714db7b53a8e31bce167f9"
+  },
+  "kippo-react/src/components/Testimonials.jsx": {
+    "mtime": 1783101161.8480527,
+    "ast_hash": "4e376ceaeee961000ed285b370ca9710",
+    "semantic_hash": "4e376ceaeee961000ed285b370ca9710"
+  },
+  "kippo-react/src/data/logos.js": {
+    "mtime": 1783094511.8153293,
+    "ast_hash": "88c1c809d296a3cff4dd36bf312bcaa4",
+    "semantic_hash": "88c1c809d296a3cff4dd36bf312bcaa4"
+  },
+  "kippo-react/src/data/projects.js": {
+    "mtime": 1783448619.2459998,
+    "ast_hash": "e1a9c3a76d2bae48f63c8b9e317f64d7",
+    "semantic_hash": "e1a9c3a76d2bae48f63c8b9e317f64d7"
+  },
+  "kippo-react/src/data/tech.js": {
+    "mtime": 1783346171.140472,
+    "ast_hash": "fbd2eb67e0507d54c49f7e33a65ae035",
+    "semantic_hash": "fbd2eb67e0507d54c49f7e33a65ae035"
+  },
+  "kippo-react/src/hooks/useReveal.js": {
+    "mtime": 1783094523.8661168,
+    "ast_hash": "7af9bd202ca045acb22e55b536b2d036",
+    "semantic_hash": "7af9bd202ca045acb22e55b536b2d036"
+  },
+  "kippo-react/src/hooks/useScrolled.js": {
+    "mtime": 1783094525.1740322,
+    "ast_hash": "53931edfa724e9db95dd8ac080c6c09e",
+    "semantic_hash": "53931edfa724e9db95dd8ac080c6c09e"
+  },
+  "kippo-react/src/i18n/LanguageContext.jsx": {
+    "mtime": 1783094773.446518,
+    "ast_hash": "647576ef9f0968b6c024b590b35d98b2",
+    "semantic_hash": "647576ef9f0968b6c024b590b35d98b2"
+  },
+  "kippo-react/src/i18n/en.json": {
+    "mtime": 1783430650.5392783,
+    "ast_hash": "dc37b29e2e6335e48741b6d66c55ef5c",
+    "semantic_hash": "dc37b29e2e6335e48741b6d66c55ef5c"
+  },
+  "kippo-react/src/i18n/pt.json": {
+    "mtime": 1783430641.9613092,
+    "ast_hash": "db9bccbba17b973ad53373e4c23d96b4",
+    "semantic_hash": "db9bccbba17b973ad53373e4c23d96b4"
+  },
+  "kippo-react/src/main.jsx": {
+    "mtime": 1783094536.494608,
+    "ast_hash": "ea95dbd5a72ce086004cc4f66fc38be7",
+    "semantic_hash": "ea95dbd5a72ce086004cc4f66fc38be7"
+  },
+  "kippo-react/src/pages/Contact.jsx": {
+    "mtime": 1783435163.5344977,
+    "ast_hash": "d20632d4d0eb584cf36e3b068aa34e4b",
+    "semantic_hash": "d20632d4d0eb584cf36e3b068aa34e4b"
+  },
+  "kippo-react/src/pages/Home.jsx": {
+    "mtime": 1783347287.630919,
+    "ast_hash": "903d67e512bbb505ea76cfb5a7933644",
+    "semantic_hash": "903d67e512bbb505ea76cfb5a7933644"
+  },
+  "kippo-react/src/pages/ProjectDetail.jsx": {
+    "mtime": 1783430566.1523182,
+    "ast_hash": "8dbf8c8a600c02e72b06dbc669a26bc3",
+    "semantic_hash": "8dbf8c8a600c02e72b06dbc669a26bc3"
+  },
+  "kippo-react/tailwind.config.js": {
+    "mtime": 1783094239.8180957,
+    "ast_hash": "b7fbb26a9f3adc596f242958b2338739",
+    "semantic_hash": "b7fbb26a9f3adc596f242958b2338739"
+  },
+  "kippo-react/vercel.json": {
+    "mtime": 1783449704.9154987,
+    "ast_hash": "6411d2fbb5f0e00aaff0ca0ded84e0b6",
+    "semantic_hash": "6411d2fbb5f0e00aaff0ca0ded84e0b6"
+  },
+  "kippo-react/vite.config.js": {
+    "mtime": 1783094231.3662717,
+    "ast_hash": "02e3a514f9c2c55ef4fc12c47689c499",
+    "semantic_hash": "02e3a514f9c2c55ef4fc12c47689c499"
+  },
+  "DESIGN.md": {
+    "mtime": 1783085238.4719152,
+    "ast_hash": "10eddf3789d7859df45ef20c31fcad14",
+    "semantic_hash": "10eddf3789d7859df45ef20c31fcad14"
+  },
+  "PRODUCT.md": {
+    "mtime": 1783085028.6372862,
+    "ast_hash": "88e11f1360a511bbd8f4885650f74319",
+    "semantic_hash": "88e11f1360a511bbd8f4885650f74319"
+  },
+  "README.md": {
+    "mtime": 1782386823.0688915,
+    "ast_hash": "41df43f71294200f06ab7d31c1925e21",
+    "semantic_hash": "41df43f71294200f06ab7d31c1925e21"
+  },
+  "kippo-react/README.md": {
+    "mtime": 1783101544.982114,
+    "ast_hash": "6445b5287dee6247afbd28d09e2a504d",
+    "semantic_hash": "6445b5287dee6247afbd28d09e2a504d"
+  },
+  "kippo-react/index.html": {
+    "mtime": 1783348122.2128563,
+    "ast_hash": "7ea207332414fe73b0a266fc948e1b9f",
+    "semantic_hash": "7ea207332414fe73b0a266fc948e1b9f"
+  },
+  "favcon/IMG Kippo barbearia .png": {
+    "mtime": 1783448318.988483,
+    "ast_hash": "c957fbebfe6fc6a5c9a5248bbbfbf264",
+    "semantic_hash": "c957fbebfe6fc6a5c9a5248bbbfbf264"
+  },
+  "favcon/img para colocar .png": {
+    "mtime": 1782400122.9538665,
+    "ast_hash": "060f23f87bca6952fbf4e4d57dc4c7a3",
+    "semantic_hash": "060f23f87bca6952fbf4e4d57dc4c7a3"
+  },
+  "favcon/kippo.png": {
+    "mtime": 1782301462.1537676,
+    "ast_hash": "f343396eb01d4be389ba486941e6889e",
+    "semantic_hash": "f343396eb01d4be389ba486941e6889e"
+  },
+  "favcon/odonto img.png": {
+    "mtime": 1782402128.2832067,
+    "ast_hash": "7214c5d04d67813f4aaedba922d8096f",
+    "semantic_hash": "7214c5d04d67813f4aaedba922d8096f"
+  },
+  "favcon/prime-fitness.png": {
+    "mtime": 1782909243.0911326,
+    "ast_hash": "aa19b059928141628906d851e7ba0428",
+    "semantic_hash": "aa19b059928141628906d851e7ba0428"
+  },
+  "kippo-react/public/favcon/kippo-barbearia.png": {
+    "mtime": 1783448588.3175013,
+    "ast_hash": "c957fbebfe6fc6a5c9a5248bbbfbf264",
+    "semantic_hash": "c957fbebfe6fc6a5c9a5248bbbfbf264"
+  },
+  "kippo-react/public/favcon/kippo.png": {
+    "mtime": 1783094546.718589,
+    "ast_hash": "f343396eb01d4be389ba486941e6889e",
+    "semantic_hash": "f343396eb01d4be389ba486941e6889e"
+  },
+  "kippo-react/public/favcon/odonto-img.png": {
+    "mtime": 1783094546.8510983,
+    "ast_hash": "7214c5d04d67813f4aaedba922d8096f",
+    "semantic_hash": "7214c5d04d67813f4aaedba922d8096f"
+  },
+  "kippo-react/public/favcon/prime-fitness.png": {
+    "mtime": 1783094546.7751365,
+    "ast_hash": "aa19b059928141628906d851e7ba0428",
+    "semantic_hash": "aa19b059928141628906d851e7ba0428"
+  }
+}

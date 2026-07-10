@@ -123,6 +123,47 @@ export const projects = [
   },
 
   {
+    id: 'e-commercer-kazp',
+    title: { pt: 'Kazp E-commerce', en: 'Kazp E-commerce' },
+    cover: '/favcon/e-commercer-kazp.png',
+    init: 'KZ',
+    c1: '#0F172A', c2: '#3B82F6',
+    tags: ['React', 'Node.js', 'Dashboard', 'API REST'],
+    liveUrl: null,
+    repoUrl: null,
+    summary: {
+      pt: 'E-commerce com painel administrativo completo: catálogo, pedidos, pagamentos e dashboard em tempo real.',
+      en: 'E-commerce with full admin panel: catalog, orders, payments and real-time dashboard.'
+    },
+    overview: {
+      pt: [
+        'Sistema e-commerce completo desenvolvido em arquitetura monorepo, separando a loja web do painel administrativo e da API.',
+        'A loja apresenta catálogo de produtos, carrinho, checkout e acompanhamento de pedidos. O dashboard oferece controle de estoque, gestão de pedidos e visão de métricas de vendas. A API REST em Node.js centraliza regras de negócio, autenticação e integração com gateway de pagamentos.'
+      ],
+      en: [
+        'Full e-commerce system built as a monorepo, separating the storefront, admin dashboard and API.',
+        'The storefront features product catalog, cart, checkout and order tracking. The dashboard provides stock control, order management and sales metrics. The Node.js REST API centralizes business rules, authentication and payment gateway integration.'
+      ]
+    },
+    duration: { pt: '≈ 6 semanas', en: '≈ 6 weeks' },
+    focus: {
+      pt: 'Entregar uma plataforma de vendas funcional do catálogo ao dashboard administrativo, com foco em escala e controle operacional.',
+      en: 'Deliver a working sales platform from catalog to admin dashboard, focused on scale and operational control.'
+    },
+    tech: [
+      { name: 'React', desc: { pt: 'Interface da loja e do painel com componentes reutilizáveis e estado de UI.', en: 'Storefront and admin UI with reusable components and UI state.' } },
+      { name: 'Node.js', desc: { pt: 'API REST com autenticação, regras de negócio e integração com pagamentos.', en: 'REST API with authentication, business rules and payment integration.' } },
+      { name: 'Dashboard', desc: { pt: 'Painel administrativo para produtos, pedidos e acompanhamento de métricas.', en: 'Admin panel for products, orders and metrics tracking.' } },
+      { name: 'API REST', desc: { pt: 'Comunicação padronizada entre web, dashboard e serviços backend.', en: 'Standardized communication between web, dashboard and backend services.' } },
+      { name: 'Monorepo', desc: { pt: 'apps/web, apps/api e apps/dashboard organizados em um único repositório.', en: 'apps/web, apps/api and apps/dashboard organized in a single repository.' } }
+    ],
+    highlights: {
+      pt: ['Catálogo com checkout', 'Dashboard administrativo', 'API REST própria', 'Gestão de pedidos e estoque'],
+      en: ['Catalog with checkout', 'Admin dashboard', 'Own REST API', 'Order and stock management']
+    }
+  },
+
+  {
     id: 'landing-vertice',
     title: { pt: 'Landing Vértice', en: 'Vértice Landing' },
     cover: null,
