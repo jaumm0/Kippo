@@ -4,10 +4,10 @@ import { useI18n } from '../i18n/LanguageContext'
 import Intro from '../components/Intro'
 import Hero from '../components/Hero'
 import LogoCloud from '../components/LogoCloud'
+import Compare from '../components/Compare'
 import Services from '../components/Services'
-import Tech from '../components/Tech'
+import Process from '../components/Process'
 import Portfolio from '../components/Portfolio'
-import Testimonials from '../components/Testimonials'
 import CTA from '../components/CTA'
 
 const pageVariants = {
@@ -45,11 +45,13 @@ export default function Home() {
         transition={pageTransition}
       >
         <Hero />
+
         <LogoCloud />
         <Portfolio />
+        <Process />
         <Services />
-        <Tech />
-        <Testimonials />
+        
+        <Compare />
         <CTA />
       </motion.div>
     </>
