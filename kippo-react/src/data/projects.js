@@ -2,6 +2,47 @@
 
 export const projects = [
   {
+    id: 'lacerda-almeida-advocacia',
+    title: { pt: 'Lacerda & Almeida Advocacia', en: 'Lacerda & Almeida Law Firm' },
+    cover: '/favcon/lacerda-almeida.png',
+    init: 'LA',
+    c1: '#C5A572', c2: '#1C1B19',
+    tags: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
+    liveUrl: null,
+    repoUrl: 'https://github.com/jaumm0/Kippo-advocacia-',
+    summary: {
+      pt: 'Landing page premium para escritório de advocacia, com design editorial sofisticado e paleta dourado fosco sobre grafite — autoridade e discrição já no primeiro contato.',
+      en: 'Premium landing page for a law firm, with sophisticated editorial design and a matte-gold-on-graphite palette — authority and discretion from the first contact.'
+    },
+    overview: {
+      pt: [
+        'Landing page institucional desenvolvida para a Lacerda & Almeida Advocacia, escritório com atuação em Direito Empresarial, Civil, Trabalhista e Tributário. A proposta foi transmitir solidez jurídica e discrição já no primeiro contato.',
+        'Construída em React + Vite + Tailwind CSS com Framer Motion e Lucide, organiza o conteúdo em Hero, Escritório, Atuação, Equipe, Casos, Depoimentos, FAQ e Contato. A tipografia em Playfair Display + Cormorant Garamond + Inter sustenta o tom editorial.'
+      ],
+      en: [
+        'Institutional landing page built for Lacerda & Almeida, a law firm practicing Corporate, Civil, Labor and Tax law. The goal was to convey legal solidity and discretion from the very first contact.',
+        'Built with React + Vite + Tailwind CSS, Framer Motion and Lucide, it organizes content into Hero, Firm, Practice Areas, Team, Cases, Testimonials, FAQ and Contact. Playfair Display + Cormorant Garamond + Inter typography carries the editorial tone.'
+      ]
+    },
+    duration: { pt: '≈ 2 semanas', en: '≈ 2 weeks' },
+    focus: {
+      pt: 'Comunicar a autoridade e a discrição do escritório, conduzindo o visitante ao contato por WhatsApp ou e-mail com confiança.',
+      en: 'Communicate the firm’s authority and discretion, leading the visitor to reach out via WhatsApp or email with confidence.'
+    },
+    tech: [
+      { name: 'React', desc: { pt: 'Componentização por seção (Hero, Atuação, Equipe, Casos, etc.) com estado leve.', en: 'Per-section components (Hero, Practice Areas, Team, Cases, etc.) with light state.' } },
+      { name: 'Vite', desc: { pt: 'Dev server instantâneo e build de produção otimizado.', en: 'Instant dev server and optimized production build.' } },
+      { name: 'Tailwind CSS', desc: { pt: 'Design system utilitário com tokens autorais (dourado fosco sobre grafite).', en: 'Utility-first design system with original tokens (matte gold on graphite).' } },
+      { name: 'Framer Motion', desc: { pt: 'Animações suaves de entrada, reveal e microinterações.', en: 'Smooth entrance, reveal and microinteraction animations.' } },
+      { name: 'Playfair + Cormorant', desc: { pt: 'Tipografia display (Playfair) e serifada (Cormorant) via Google Fonts.', en: 'Display (Playfair) and serif (Cormorant) typography via Google Fonts.' } }
+    ],
+    highlights: {
+      pt: ['Design editorial premium', '4 áreas de atuação', 'Casos com métricas', 'Contato discreto via WhatsApp'],
+      en: ['Premium editorial design', '4 practice areas', 'Cases with metrics', 'Discreet WhatsApp contact']
+    }
+  },
+
+  {
     id: 'kippo-barbearia',
     title: { pt: 'Kippo Barbearia', en: 'Kippo Barbershop' },
     cover: '/favcon/kippo-barbearia.png',
@@ -160,124 +201,6 @@ export const projects = [
     highlights: {
       pt: ['Catálogo com checkout', 'Dashboard administrativo', 'API REST própria', 'Gestão de pedidos e estoque'],
       en: ['Catalog with checkout', 'Admin dashboard', 'Own REST API', 'Order and stock management']
-    }
-  },
-
-  {
-    id: 'landing-vertice',
-    title: { pt: 'Landing Vértice', en: 'Vértice Landing' },
-    cover: null,
-    init: 'Ve',
-    c1: '#065F46', c2: '#1F2937',
-    tags: ['JavaScript', 'SEO', 'A/B Testing'],
-    liveUrl: null,
-    repoUrl: null,
-    summary: {
-      pt: 'Landing page de alta conversão para startup de consultoria, com A/B testing.',
-      en: 'A high-conversion landing page for a consulting startup, with A/B testing.'
-    },
-    overview: {
-      pt: [
-        'Landing page enxuta e objetiva para uma startup de consultoria, desenhada para captar leads qualificados.',
-        'Estrutura leve em JavaScript puro, com cópia orientada a conversão e experimentos A/B para validar hipóteses de mensagem.'
-      ],
-      en: [
-        'Lean, objective landing page for a consulting startup, designed to capture qualified leads.',
-        'Lightweight vanilla JavaScript structure, conversion-oriented copy and A/B experiments to validate messaging hypotheses.'
-      ]
-    },
-    duration: { pt: '≈ 1 semana', en: '≈ 1 week' },
-    focus: {
-      pt: 'Validar hipóteses de mensagem com A/B testing para maximizar a conversão de leads.',
-      en: 'Validate messaging hypotheses with A/B testing to maximize lead conversion.'
-    },
-    tech: [
-      { name: 'JavaScript', desc: { pt: 'Lógica de UI e captura de leads sem framework pesado.', en: 'UI logic and lead capture without a heavy framework.' } },
-      { name: 'CSS', desc: { pt: 'Estilização responsiva e performática.', en: 'Responsive, performant styling.' } },
-      { name: 'A/B Testing', desc: { pt: 'Experimentos controlados de cópia e layout.', en: 'Controlled experiments on copy and layout.' } },
-      { name: 'SEO', desc: { pt: 'Estrutura semântica e metadados para indexação.', en: 'Semantic structure and metadata for indexing.' } }
-    ],
-    highlights: {
-      pt: ['Cópia orientada a conversão', 'Experimentos A/B', 'Carregamento rápido', 'SEO técnico'],
-      en: ['Conversion-oriented copy', 'A/B experiments', 'Fast load', 'Technical SEO']
-    }
-  },
-
-  {
-    id: 'automacao-aura',
-    title: { pt: 'Automação Aura', en: 'Aura Automation' },
-    cover: null,
-    init: 'Au',
-    c1: '#10B981', c2: '#1F2937',
-    tags: ['Node.js', 'APIs REST', 'Automação'],
-    liveUrl: null,
-    repoUrl: null,
-    summary: {
-      pt: 'Integração entre CRM e ERP eliminando trabalho manual e reduzindo erros em 90%.',
-      en: 'CRM-to-ERP integration that eliminated manual work and reduced errors by 90%.'
-    },
-    overview: {
-      pt: [
-        'Automação que conecta o CRM de vendas ao ERP da empresa, sincronizando dados sem intervenção manual.',
-        'Desenvolvida em Node.js consumindo APIs REST dos dois sistemas, com logging, retries e tratamento de erros para rodar em produção com confiabilidade.'
-      ],
-      en: [
-        'Automation connecting the sales CRM to the company ERP, syncing data without manual intervention.',
-        'Built in Node.js consuming REST APIs from both systems, with logging, retries and error handling to run reliably in production.'
-      ]
-    },
-    duration: { pt: '≈ 4 semanas', en: '≈ 4 weeks' },
-    focus: {
-      pt: 'Automatizar o fluxo de dados entre CRM e ERP, eliminando retrabalho manual e erros de digitação.',
-      en: 'Automate the data flow between CRM and ERP, eliminating manual rework and typing errors.'
-    },
-    tech: [
-      { name: 'Node.js', desc: { pt: 'Runtime para os jobs de sincronização agendados.', en: 'Runtime for the scheduled sync jobs.' } },
-      { name: 'APIs REST', desc: { pt: 'Integração com CRM e ERP via endpoints documentados.', en: 'Integration with CRM and ERP via documented endpoints.' } },
-      { name: 'Logging & Retries', desc: { pt: 'Rastreabilidade e reprocessamento seguro de falhas.', en: 'Traceability and safe failure reprocessing.' } }
-    ],
-    highlights: {
-      pt: ['Redução de 90% nos erros', 'Sincronização automática', 'Logging detalhado', 'Retries com backoff'],
-      en: ['90% error reduction', 'Automatic sync', 'Detailed logging', 'Retries with backoff']
-    }
-  },
-
-  {
-    id: 'portal-noticia',
-    title: { pt: 'Portal Notícia', en: 'News Portal' },
-    cover: null,
-    init: 'No',
-    c1: '#065F46', c2: '#10B981',
-    tags: ['TypeScript', 'MySQL', 'CMS'],
-    liveUrl: null,
-    repoUrl: null,
-    summary: {
-      pt: 'Site institucional responsivo para veículo de comunicação, com CMS customizado.',
-      en: 'A responsive institutional site for a media outlet, with a custom CMS.'
-    },
-    overview: {
-      pt: [
-        'Portal institucional para um veículo de comunicação, com publicação ágil de notícias e alto desempenho sob tráfego intenso.',
-        'Construído em TypeScript no front e back, com MySQL para persistência e um CMS customizado para a redação publicar sem depender de devs.'
-      ],
-      en: [
-        'Institutional portal for a media outlet, with agile news publishing and high performance under heavy traffic.',
-        'Built with TypeScript on front and back, MySQL for persistence and a custom CMS so the newsroom can publish without depending on devs.'
-      ]
-    },
-    duration: { pt: '≈ 5 semanas', en: '≈ 5 weeks' },
-    focus: {
-      pt: 'Publicação ágil de notícias com CMS customizado e performance em alto tráfego.',
-      en: 'Agile news publishing with a custom CMS and performance under heavy traffic.'
-    },
-    tech: [
-      { name: 'TypeScript', desc: { pt: 'Tipagem em todo o stack para segurança e manutenibilidade.', en: 'Typing across the stack for safety and maintainability.' } },
-      { name: 'MySQL', desc: { pt: 'Modelagem relacional para notícias, autores e categorias.', en: 'Relational modeling for news, authors and categories.' } },
-      { name: 'CMS Customizado', desc: { pt: 'Painel próprio para a redação publicar sem código.', en: 'In-house panel for the newsroom to publish without code.' } }
-    ],
-    highlights: {
-      pt: ['CMS próprio', 'Alta performance', 'Tipagem end-to-end', 'Responsivo'],
-      en: ['Custom CMS', 'High performance', 'End-to-end typing', 'Responsive']
     }
   }
 ]

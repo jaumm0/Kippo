@@ -184,6 +184,35 @@
 .hero__credentials li { display: flex; align-items: center; gap: 10px; }
 .cred__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); flex-shrink: 0; }
 
+/* ---------- Hero · process timeline (painel lateral) ---------- */
+.ptimeline__title {
+  margin: 0 0 24px;
+  font-size: 1.1875rem; font-weight: 700; line-height: 1.25; letter-spacing: -.01em;
+  color: var(--ink);
+}
+.ptimeline__list { position: relative; list-style: none; margin: 0; padding: 0; }
+.ptimeline__list::before {
+  content: ""; position: absolute; left: 10px; top: 10px; bottom: 10px; width: 2px;
+  background: rgba(31, 41, 55, .10); border-radius: 1px;
+}
+.ptimeline__item { position: relative; padding-left: 38px; padding-bottom: 16px; }
+.ptimeline__item:last-child { padding-bottom: 0; }
+.ptimeline__node {
+  position: absolute; left: 0; top: 2px; width: 22px; height: 22px;
+  border-radius: 50%; background: var(--white); border: 2px solid var(--green);
+  display: grid; place-items: center;
+  font-size: .625rem; font-weight: 700; color: var(--green); line-height: 1;
+}
+.ptimeline__item:last-child .ptimeline__node { background: var(--green); color: var(--white); }
+.ptimeline__title-step {
+  margin: 0 0 2px;
+  font-size: .9375rem; font-weight: 600; line-height: 1.3; color: var(--ink);
+}
+.ptimeline__text {
+  margin: 0;
+  font-size: .8125rem; line-height: 1.5; color: var(--ink-soft);
+}
+
 /* ---------- CTA inner ---------- */
 .cta__inner { max-width: 640px; text-align: center; position: relative; z-index: 1; }
 .cta__title { font-size: clamp(1.9rem, 4vw, 2.75rem); font-weight: 700; line-height: 1.15; letter-spacing: -.02em; }
