@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import { useI18n } from '../i18n/LanguageContext'
 import Reveal from '../components/Reveal'
 
+const WHATSAPP = 'https://wa.me/5567993404143'
+
 export default function Hero() {
   const { t } = useI18n()
 
@@ -22,13 +24,17 @@ export default function Hero() {
         </Reveal>
 
         <Reveal className="hero__actions" index={3}>
-          <Link to="/contato" className="btn btn--primary">{t('hero.ctaPrimary')}</Link>
+          <a href={WHATSAPP} className="btn btn--primary" target="_blank" rel="noopener">{t('hero.ctaPrimary')}</a>
           <Link to="/#projetos" className="btn btn--ghost">
             <span>{t('hero.ctaGhost')}</span> <span className="arrow" aria-hidden="true">→</span>
           </Link>
         </Reveal>
 
-        <Reveal as="ul" className="hero__credentials" index={4}>
+        <Reveal className="hero__reassure" index={4}>
+          <span>{t('hero.reassure')}</span>
+        </Reveal>
+
+        <Reveal as="ul" className="hero__credentials" index={5}>
           <li><span className="cred__dot"></span><span>{t('hero.cred1')}</span></li>
           <li><span className="cred__dot"></span><span>{t('hero.cred2')}</span></li>
           <li><span className="cred__dot"></span><span>{t('hero.cred3')}</span></li>

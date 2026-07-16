@@ -22,14 +22,6 @@ export default function Compare() {
             <p className="compare-card__label">{t('compare.without.label')}</p>
             <h3 className="compare-card__name">{t('compare.without.title')}</h3>
 
-            <div className="compare-metric compare-metric--neg">
-              <span className="compare-metric__tag">{t('compare.without.metricLabel')}</span>
-              <p className="compare-metric__value">{t('compare.without.metric')}</p>
-              <div className="compare-metric__bars compare-metric__bars--down" aria-hidden="true">
-                <span /><span /><span /><span />
-              </div>
-            </div>
-
             <ul className="compare-list">
               {WITHOUT.map((id) => (
                 <li key={id}>
@@ -44,19 +36,9 @@ export default function Compare() {
           </Reveal>
 
           <Reveal as="article" className="compare-card compare-card--pos" index={2}>
-            <span className="compare-card__badge">{t('compare.with.badge')}</span>
             <div className="compare-card__icon compare-card__icon--pos" aria-hidden="true">✓</div>
             <p className="compare-card__label">{t('compare.with.label')}</p>
             <h3 className="compare-card__name">{t('compare.with.title')}</h3>
-
-            <div className="compare-metric compare-metric--pos">
-              <span className="compare-metric__tag">{t('compare.with.metricLabel')}</span>
-              <p className="compare-metric__value">{t('compare.with.metric')}</p>
-              <p className="compare-metric__sub">{t('compare.with.metricSub')}</p>
-              <div className="compare-metric__bars compare-metric__bars--up" aria-hidden="true">
-                <span /><span /><span /><span /><span />
-              </div>
-            </div>
 
             <p className="compare-gains">{t('compare.with.gains')}</p>
             <ul className="compare-list">

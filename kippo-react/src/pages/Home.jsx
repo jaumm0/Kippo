@@ -3,11 +3,10 @@ import { motion } from 'framer-motion'
 import { useI18n } from '../i18n/LanguageContext'
 import Intro from '../components/Intro'
 import Hero from '../components/Hero'
-import LogoCloud from '../components/LogoCloud'
-import Compare from '../components/Compare'
+import Portfolio from '../components/Portfolio'
 import Services from '../components/Services'
 import Process from '../components/Process'
-import Portfolio from '../components/Portfolio'
+import Compare from '../components/Compare'
 import CTA from '../components/CTA'
 
 const pageVariants = {
@@ -46,12 +45,10 @@ export default function Home() {
       >
         <Hero />
 
-        <LogoCloud />
         <Portfolio />
-        <Process />
         <Services />
-        
         <Compare />
+        <Process />
         <CTA />
       </motion.div>
     </>

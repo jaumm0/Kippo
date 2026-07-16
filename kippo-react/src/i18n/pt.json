@@ -16,8 +16,9 @@
   "hero.loc": "Campo Grande · MS",
   "hero.title": "Transformamos ideias<br>em <em class=\"accent\">experiências<br>digitais</em>.",
   "hero.lead": "Criamos sites, landing pages e sistemas modernos com React, JavaScript e tecnologias atuais — projetados para performar e acelerar resultados.",
-  "hero.ctaPrimary": "Solicitar Orçamento",
+  "hero.ctaPrimary": "Chamar no WhatsApp",
   "hero.ctaGhost": "Ver Projetos",
+  "hero.reassure": "Resposta em até 8h",
   "hero.cred1": "+80 projetos entregues",
   "hero.cred2": "7 anos de experiência",
   "hero.cred3": "Foco em conversão",
@@ -26,9 +27,9 @@
 
   "logocloud.title": "Marcas que crescem com a gente",
 
-  "compare.eyebrow": "O custo do invisível",
-  "compare.title": "Empresas sem site perdem oportunidades todos os dias.",
-  "compare.desc": "Cada busca sem resposta é um cliente que escolheu outra empresa.",
+  "compare.eyebrow": "Antes e depois",
+  "compare.title": "O que muda quando sua marca aparece de verdade.",
+  "compare.desc": "Veja a diferença entre existir na internet e ser encontrado por ela.",
   "compare.without.label": "Cenário atual",
   "compare.without.title": "Sem um site profissional",
   "compare.without.metricLabel": "Performance",
@@ -128,6 +129,7 @@
   "cta.title": "Pronto para tirar seu projeto do papel?",
   "cta.text": "Vamos conversar sobre a sua ideia e encontrar a melhor forma de torná-la realidade.",
   "cta.btn": "Falar com um especialista",
+  "cta.reassure": "Resposta em até 8h",
 
   "footer.tagline": "Desenvolvimento de produtos digitais com performance e propósito.",
   "footer.rights": "Todos os direitos reservados.",

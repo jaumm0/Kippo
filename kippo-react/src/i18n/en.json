@@ -16,8 +16,9 @@
   "hero.loc": "Campo Grande · MS",
   "hero.title": "Turning ideas<br>into <em class=\"accent\">digital<br>experiences</em>.",
   "hero.lead": "We build modern websites, landing pages and web systems using React, JavaScript and current technologies — engineered to perform and accelerate results.",
-  "hero.ctaPrimary": "Request a Quote",
+  "hero.ctaPrimary": "Chat on WhatsApp",
   "hero.ctaGhost": "View Work",
+  "hero.reassure": "Reply within 8h",
   "hero.cred1": "80+ projects delivered",
   "hero.cred2": "7 years of experience",
   "hero.cred3": "Conversion-focused",
@@ -26,9 +27,9 @@
 
   "logocloud.title": "Brands growing with us",
 
-  "compare.eyebrow": "The cost of invisibility",
-  "compare.title": "Businesses without a website lose opportunities every day.",
-  "compare.desc": "Every unanswered search is a customer who chose someone else.",
+  "compare.eyebrow": "Before and after",
+  "compare.title": "What changes when your brand actually shows up.",
+  "compare.desc": "The difference between existing online and being found.",
   "compare.without.label": "Current scenario",
   "compare.without.title": "Without a professional website",
   "compare.without.metricLabel": "Performance",
@@ -128,6 +129,7 @@
   "cta.title": "Ready to bring your project to life?",
   "cta.text": "Let's talk about your idea and find the best way to make it a reality.",
   "cta.btn": "Talk to a specialist",
+  "cta.reassure": "Reply within 8h",
 
   "footer.tagline": "Digital product development with performance and purpose.",
   "footer.rights": "All rights reserved.",

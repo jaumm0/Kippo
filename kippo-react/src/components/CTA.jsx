@@ -18,6 +18,7 @@ export default function CTA() {
           >
             {t('cta.btn')}
           </a>
+          <p className="cta__reassure">{t('cta.reassure')}</p>
         </Reveal>
       </div>
     </section>
