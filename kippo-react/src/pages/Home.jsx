@@ -46,9 +46,10 @@ export default function Home() {
         <Hero />
 
         <Portfolio />
-        <Services />
+
         <Compare />
         <Process />
+        <Services />
         <CTA />
       </motion.div>
     </>
