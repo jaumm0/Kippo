@@ -17,7 +17,7 @@ export default function Footer() {
         </div>
 
         <nav className="footer__nav" aria-label="Rodapé">
-          <Link to="/#servicos">{t('nav.services')}</Link>
+          <Link to="/#processo">{t('nav.services')}</Link>
           <Link to="/#projetos">{t('nav.work')}</Link>
           <Link to="/contato">{t('nav.contact')}</Link>
         </nav>

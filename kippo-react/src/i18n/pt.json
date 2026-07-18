@@ -82,6 +82,7 @@
   "tech.learnMore": "Saiba mais",
 
   "process.eyebrow": "Como trabalhamos",
+  "process.results": "Resultados desse processo",
   "process.title": "Do briefing ao ar, passo a passo",
   "process.desc": "Um fluxo claro, sem surpresas — você acompanha cada etapa até o projeto no ar.",
   "process.s1.title": "Definir projeto",
@@ -149,6 +150,9 @@
   "projDetail.code": "Código no GitHub",
   "projDetail.notFound": "Projeto não encontrado.",
   "projDetail.backHome": "Página principal",
+  "projDetail.gallery": "Galeria do projeto",
+  "projDetail.prev": "Imagem anterior",
+  "projDetail.next": "Próxima imagem",
 
   "contact.eyebrow": "Contato",
   "contact.response": "Resposta em até 8h",

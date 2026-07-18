@@ -38,6 +38,7 @@ export default function Intro() {
       if (finishedRef.current) return
       finishedRef.current = true
       try { sessionStorage.setItem('kippo-intro', 'done') } catch (e) {}
+      try { window.dispatchEvent(new Event('kippo:intro-done')) } catch (e) {}
       const el = introRef.current
       if (el) el.classList.add('is-hidden')
       document.body.classList.remove('is-intro')

@@ -1,10 +1,13 @@
 /* Dados bilíngues dos projetos (fonte única de verdade para portfólio + detalhe). */
 
+import { coverFor, galleryFor } from './images'
+
 export const projects = [
   {
     id: 'lacerda-almeida-advocacia',
     title: { pt: 'Lacerda & Almeida Advocacia', en: 'Lacerda & Almeida Law Firm' },
-    cover: '/favcon/lacerda-almeida.png',
+    cover: coverFor('lacerda-almeida-advocacia'),
+    gallery: galleryFor('lacerda-almeida-advocacia'),
     init: 'LA',
     c1: '#C5A572', c2: '#1C1B19',
     tags: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
@@ -45,7 +48,8 @@ export const projects = [
   {
     id: 'kippo-barbearia',
     title: { pt: 'Kippo Barbearia', en: 'Kippo Barbershop' },
-    cover: '/favcon/kippo-barbearia.png',
+    cover: coverFor('kippo-barbearia'),
+    gallery: galleryFor('kippo-barbearia'),
     init: 'KB',
     c1: '#D4AF37', c2: '#111827',
     tags: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
@@ -86,7 +90,8 @@ export const projects = [
   {
     id: 'aurora-odontologia',
     title: { pt: 'Aurora Odontologia', en: 'Aurora Odontologia' },
-    cover: '/favcon/odonto-img.png',
+    cover: coverFor('aurora-odontologia'),
+    gallery: galleryFor('aurora-odontologia'),
     init: 'AO',
     c1: '#C9A227', c2: '#1F2937',
     tags: ['React', 'Vite', 'Tailwind CSS'],
@@ -125,11 +130,12 @@ export const projects = [
   {
     id: 'prime-fitness',
     title: { pt: 'Prime Fitness Universitário', en: 'Prime Fitness Universitário' },
-    cover: '/favcon/prime-fitness.png',
+    cover: coverFor('prime-fitness'),
+    gallery: galleryFor('prime-fitness'),
     init: 'PF',
     c1: '#934C35', c2: '#465150',
     tags: ['React', 'Vite', 'Tailwind CSS'],
-    liveUrl: null,
+    liveUrl: 'https://academia-prime-fitness-universit-ri.vercel.app/',
     repoUrl: 'https://github.com/jaumm0/Academia-Prime-Fitness-Universit-rio',
     summary: {
       pt: 'Landing page premium para academia, com estética old country e minimalista contemporânea — madeira nobre, couro e ferro escovado. Foco em planos e conversão.',
@@ -166,7 +172,8 @@ export const projects = [
   {
     id: 'e-commercer-kazp',
     title: { pt: 'Kazp E-commerce', en: 'Kazp E-commerce' },
-    cover: '/favcon/e-commercer-kazp.png',
+    cover: coverFor('e-commercer-kazp'),
+    gallery: galleryFor('e-commercer-kazp'),
     init: 'KZ',
     c1: '#0F172A', c2: '#3B82F6',
     tags: ['React', 'Node.js', 'Dashboard', 'API REST'],
@@ -201,6 +208,48 @@ export const projects = [
     highlights: {
       pt: ['Catálogo com checkout', 'Dashboard administrativo', 'API REST própria', 'Gestão de pedidos e estoque'],
       en: ['Catalog with checkout', 'Admin dashboard', 'Own REST API', 'Order and stock management']
+    }
+  },
+
+  {
+    id: 'kippo-erp',
+    title: { pt: 'Kippo ERP', en: 'Kippo ERP' },
+    cover: coverFor('kippo-erp'),
+    gallery: galleryFor('kippo-erp'),
+    init: 'KE',
+    c1: '#059669', c2: '#111827',
+    tags: ['React', 'Node.js', 'Express', 'Prisma', 'PostgreSQL'],
+    liveUrl: null,
+    repoUrl: null,
+    summary: {
+      pt: 'Sistema web (SaaS) para PMEs — gestão de clientes, produtos, vendas, finanças e orçamentos em um só lugar. Interface premium, dark mode, RBAC, animações com Framer Motion e gráficos.',
+      en: 'Web system (SaaS) for SMBs — managing customers, products, sales, finance and quotes in one place. Premium UI, dark mode, RBAC, Framer Motion animations and charts.'
+    },
+    overview: {
+      pt: [
+        'Sistema ERP desenvolvido em monorepo, com `client/` (React + Vite + Tailwind) e `server/` (Node + Express + JWT + Prisma + PostgreSQL). Reúne gestão de clientes, produtos, vendas, finanças e orçamentos em uma única plataforma premium, em dark mode.',
+        'O front-end funciona de forma autônoma com um mock em localStorage (dados de exemplo inclusos), dispensando back-end. Quando `VITE_USE_API=true`, a camada de services passa a usar a API Express — mantendo a mesma assinatura, sem mudar os componentes. Inclui dashboard com KPIs e gráficos, CRUDs com exportação Excel/PDF/CSV, RBAC por módulo, orçamentos convertíveis em venda e centro de notificações.'
+      ],
+      en: [
+        'ERP system built as a monorepo, with `client/` (React + Vite + Tailwind) and `server/` (Node + Express + JWT + Prisma + PostgreSQL). It brings together management of customers, products, sales, finance and quotes in a single premium, dark-mode platform.',
+        'The front-end runs autonomously against a localStorage mock (sample data included), requiring no back-end. When `VITE_USE_API=true`, the services layer switches to the Express API — keeping the same signatures, with no changes to components. It ships with a KPI/charts dashboard, CRUDs with Excel/PDF/CSV export, per-module RBAC, quotes convertible into sales, and a notifications center.'
+      ]
+    },
+    duration: { pt: '≈ 8 semanas', en: '≈ 8 weeks' },
+    focus: {
+      pt: 'Centralizar a operação de PMEs em uma só plataforma — do cadastro ao financeiro — com identidade premium e controle de acesso por perfil.',
+      en: 'Centralize SMB operations on a single platform — from records to finance — with a premium identity and role-based access control.'
+    },
+    tech: [
+      { name: 'React', desc: { pt: 'Shell do app (AuthLayout/AppLayout), UI kit reutilizável e páginas por módulo.', en: 'App shell (AuthLayout/AppLayout), reusable UI kit and per-module pages.' } },
+      { name: 'Node.js + Express', desc: { pt: 'API REST com JWT, middleware RBAC e fábrica de rotas CRUD.', en: 'REST API with JWT, RBAC middleware and a CRUD route factory.' } },
+      { name: 'Prisma + PostgreSQL', desc: { pt: 'Camada de dados tipada com migrations e seed de exemplo.', en: 'Typed data layer with migrations and a sample seed.' } },
+      { name: 'Tailwind CSS', desc: { pt: 'Design system dark mode em verde esmeralda, cantos arredondados e animações discretas.', en: 'Dark-mode design system in emerald green, rounded corners and subtle animations.' } },
+      { name: 'Framer Motion + Chart.js', desc: { pt: 'Animações de UI e gráficos de vendas e financeiro em tempo real.', en: 'UI animations and real-time sales and finance charts.' } }
+    ],
+    highlights: {
+      pt: ['Dashboard com KPIs e gráficos', 'RBAC por módulo', 'Orçamento convertido em venda', 'Exportação Excel/PDF/CSV'],
+      en: ['Dashboard with KPIs and charts', 'Per-module RBAC', 'Quote converted into sale', 'Excel/PDF/CSV export']
     }
   }
 ]

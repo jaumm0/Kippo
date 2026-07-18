@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
+import { motion, useReducedMotion } from 'framer-motion'
 import { useI18n } from '../i18n/LanguageContext'
 import Reveal from '../components/Reveal'
 
 export default function ProjectCard({ project, index }) {
   const { t, lang } = useI18n()
+  const reduce = useReducedMotion()
 
   const imgStyle = project.cover
     ? { backgroundImage: `url('${project.cover}')` }
@@ -11,12 +13,13 @@ export default function ProjectCard({ project, index }) {
 
   return (
     <Reveal as="article" index={index} className="project">
-      <div
+      <motion.div
         className={`project__img${project.cover ? ' project__img--cover' : ''}`}
         style={imgStyle}
+        layoutId={reduce ? undefined : `cover-${project.id}`}
       >
         <span className="project__init">{project.init}</span>
-      </div>
+      </motion.div>
       <div className="project__body">
         <h3 className="project__title">{project.title[lang]}</h3>
         <p className="project__text">{project.summary[lang]}</p>

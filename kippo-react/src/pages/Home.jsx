@@ -49,7 +49,7 @@ export default function Home() {
 
         <Compare />
         <Process />
-        <Services />
+        
         <CTA />
       </motion.div>
     </>

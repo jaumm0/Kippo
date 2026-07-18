@@ -1,6 +1,6 @@
-import { useEffect } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion, AnimatePresence } from 'framer-motion'
 import { getProject } from '../data/projects'
 import { useI18n } from '../i18n/LanguageContext'
 import Reveal from '../components/Reveal'
@@ -18,10 +18,133 @@ function setMeta(selector, attr, content) {
   if (el) el.setAttribute(attr, content)
 }
 
+function ProjectCarousel({ project, reduce, t }) {
+  const slides = project.gallery && project.gallery.length > 0
+    ? project.gallery
+    : (project.cover ? [project.cover] : [])
+  const [index, setIndex] = useState(0)
+  const total = slides.length
+
+  const go = useCallback((dir) => {
+    setIndex((i) => (i + dir + total) % total)
+  }, [total])
+
+  const [paused, setPaused] = useState(false)
+
+  useEffect(() => {
+    if (total <= 1) return
+    const onKey = (e) => {
+      if (e.key === 'ArrowLeft') go(-1)
+      if (e.key === 'ArrowRight') go(1)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [go, total])
+
+  // Auto-play: avança a cada 4,5s, pausando no hover/foco. Desativa se o
+  // usuário pede reduced motion. Reinicia a contagem a cada troca (manual
+  // ou automática) para não avançar logo depois de uma interação.
+  useEffect(() => {
+    if (reduce || total <= 1 || paused) return
+    const id = setInterval(() => setIndex((i) => (i + 1) % total), 4500)
+    return () => clearInterval(id)
+  }, [reduce, total, paused, index])
+
+  // Sem imagens: fallback de gradiente com a inicial do projeto.
+  if (total === 0) {
+    return (
+      <motion.div
+        className="proj-hero__cover proj-hero__cover--grad"
+        style={{ '--c1': project.c1, '--c2': project.c2 }}
+        layoutId={reduce ? undefined : `cover-${project.id}`}
+      >
+        <span className="proj-hero__init">{project.init}</span>
+      </motion.div>
+    )
+  }
+
+  const slideVariants = {
+    enter: (dir) => ({ opacity: 0, x: dir > 0 ? 40 : -40, scale: 1.01 }),
+    center: { opacity: 1, x: 0, scale: 1 },
+    exit: (dir) => ({ opacity: 0, x: dir > 0 ? -40 : 40, scale: 0.99 })
+  }
+
+  return (
+    <div
+      className="proj-carousel"
+      role="region"
+      aria-roledescription="carousel"
+      aria-label={t('projDetail.gallery')}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onFocusCapture={() => setPaused(true)}
+      onBlurCapture={() => setPaused(false)}
+    >
+      <motion.div
+        className="proj-carousel__viewport"
+        layoutId={reduce ? undefined : `cover-${project.id}`}
+      >
+        <AnimatePresence initial={false} custom={1} mode="popLayout">
+          <motion.div
+            key={index}
+            className="proj-carousel__slide"
+            style={{ backgroundImage: `url('${slides[index]}')` }}
+            custom={1}
+            variants={reduce ? undefined : slideVariants}
+            initial={reduce ? false : 'enter'}
+            animate="center"
+            exit={reduce ? undefined : 'exit'}
+            transition={reduce ? { duration: 0.2 } : { duration: 0.45, ease: [0.22, 0.61, 0.36, 1] }}
+            aria-hidden={false}
+          />
+        </AnimatePresence>
+      </motion.div>
+
+      {total > 1 && (
+        <>
+          <button
+            type="button"
+            className="proj-carousel__btn proj-carousel__btn--prev"
+            onClick={() => go(-1)}
+            aria-label={t('projDetail.prev')}
+          >
+            <span aria-hidden="true">‹</span>
+          </button>
+          <button
+            type="button"
+            className="proj-carousel__btn proj-carousel__btn--next"
+            onClick={() => go(1)}
+            aria-label={t('projDetail.next')}
+          >
+            <span aria-hidden="true">›</span>
+          </button>
+          <div className="proj-carousel__dots" role="tablist">
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                className={`proj-carousel__dot${i === index ? ' is-active' : ''}`}
+                onClick={() => setIndex(i)}
+                aria-label={`${t('projDetail.gallery')} ${i + 1}`}
+                aria-selected={i === index}
+                role="tab"
+              />
+            ))}
+          </div>
+          <span className="proj-carousel__count" aria-hidden="true">
+            {index + 1} / {total}
+          </span>
+        </>
+      )}
+    </div>
+  )
+}
+
 export default function ProjectDetail() {
   const { id } = useParams()
   const { t, lang } = useI18n()
   const p = getProject(id)
+  const reduce = useReducedMotion()
 
   useEffect(() => {
     if (p) {
@@ -53,13 +176,7 @@ export default function ProjectDetail() {
     )
   }
 
-  const cover = p.cover
-    ? <div className="proj-hero__cover" style={{ backgroundImage: `url('${p.cover}')` }} />
-    : (
-      <div className="proj-hero__cover proj-hero__cover--grad" style={{ '--c1': p.c1, '--c2': p.c2 }}>
-        <span className="proj-hero__init">{p.init}</span>
-      </div>
-    )
+  const cover = <ProjectCarousel project={p} reduce={reduce} t={t} />
 
   return (
     <motion.div

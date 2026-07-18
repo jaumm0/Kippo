@@ -5,7 +5,7 @@ import { useScrolled } from '../hooks/useScrolled'
 
 const NAV = [
   { target: 'inicio', key: 'nav.home', hash: '/#inicio' },
-  { target: 'servicos', key: 'nav.services', hash: '/#servicos' },
+  { target: 'processo', key: 'nav.services', hash: '/#processo' },
   { target: 'projetos', key: 'nav.work', hash: '/#projetos' },
   { target: 'contato', key: 'nav.contact', hash: '/contato' }
 ]

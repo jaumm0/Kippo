@@ -82,6 +82,7 @@
   "tech.learnMore": "Learn more",
 
   "process.eyebrow": "How we work",
+  "process.results": "What this process delivered",
   "process.title": "From briefing to launch, step by step",
   "process.desc": "A clear flow, no surprises — you follow every stage until the project goes live.",
   "process.s1.title": "Define the project",
@@ -149,6 +150,9 @@
   "projDetail.code": "Code on GitHub",
   "projDetail.notFound": "Project not found.",
   "projDetail.backHome": "Back to portfolio",
+  "projDetail.gallery": "Project gallery",
+  "projDetail.prev": "Previous image",
+  "projDetail.next": "Next image",
 
   "contact.eyebrow": "Contact",
   "contact.response": "Reply within 8h",
